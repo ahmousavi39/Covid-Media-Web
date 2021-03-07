@@ -1,0 +1,113 @@
+
+.btncontainer {
+    display: inline-block!important;
+    white-space: nowrap;
+    width : 100%;
+    text-align: center;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+element.style {
+    background-color: #e02828;
+}
+a.kofibutton:visited {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+a.kofibutton {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    line-height: 36px!important;
+    min-width: 250px;
+    display: inline-block!important;
+    padding: 2px 12px !important;
+    text-align: center !important;
+    border-radius: 7px;
+    cursor: pointer;
+    overflow-wrap: break-word;
+    vertical-align: middle;
+    border: 0 none #fff !important;
+    font-family: 'Quicksand',Helvetica,Century Gothic,sans-serif !important;
+    text-shadow: none;
+    font-weight: 700!important;
+    font-size: 14px !important;
+}
+a.kofibuttonDonate {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    line-height: 36px!important;
+    min-width: 100px;
+    display: inline-block!important;
+    padding: 2px 12px !important;
+    text-align: center !important;
+    border-radius: 7px;
+    cursor: pointer;
+    overflow-wrap: break-word;
+    vertical-align: middle;
+    border: 0 none #fff !important;
+    font-family: 'Quicksand',Helvetica,Century Gothic,sans-serif !important;
+    text-shadow: none;
+    font-weight: 700!important;
+    font-size: 14px !important;
+}
+img.kofiimg{
+    display: initial!important;
+    vertical-align: middle;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    border: none;
+    margin-top: 0;
+    margin-right: 5px!important;
+    margin-left: 0!important;
+    margin-bottom: 3px!important;
+}
+.kofitext img.kofiimg {
+    height: 15px!important;
+    width: 22px!important;
+    animation: kofi-wiggle 3s infinite;animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: kofi-wiggle;
+}
+
+.kofitext img.kofiimgpaypal {
+    height: 25px!important;
+    padding-right: 5px;
+    width: 52px!important;
+    animation: kofi-wiggle 3s infinite;animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: kofi-wiggle;
+}
+@media(max-width : 770px){
+    .container{
+        margin : 0 10%;
+    }
+    .image{
+        width: 90%;
+    }
+    .lann{
+        bottom: 7%;
+        right: 2%;
+
+    }
+    .btncontainer { 
+        display: inline-block!important;
+        white-space: nowrap;
+        min-width: 160px;
+        padding-bottom: 3%;
+    }
+    .btn{
+        margin-top: 7%
+    }
+}

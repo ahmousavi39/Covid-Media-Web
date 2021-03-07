@@ -1,0 +1,18 @@
+
+.lan {
+    position: absolute;
+    /* top: 50px; */
+    right: 10px;
+}
+.lann {
+    position: absolute;
+    /* top: 50px; */
+    right: 11%;
+}
+
+@media(max-width : 770px){
+    .lann{
+        bottom: 7%;
+        right: 2%;
+    }
+}

@@ -1,0 +1,277 @@
+{
+"Amirhossein" : {
+    "1" : "Amir en"
+},
+"rec" : {
+    "1" : "تعافى"
+},
+"dea" : {
+    "1" : "حالات الوفاة"
+},
+"con" : {
+    "1" : "تم تأكيد"
+},  
+"peo" : {
+    "1"  : "اشخاص"
+},
+"Map" : {
+    "1" : "خريطة"
+},
+"Total" : {
+    "1" : "مجموع"
+},
+"Today" : {
+    "1" : "اليوم"
+},
+"Active" : {
+    "1" : "نشيط"
+},
+"Tests" : {
+    "1" : "الاختبارات"
+},
+"Critical" : {
+    "1" : "حرج"
+},
+"Bar Graph" : {
+    "1" : "شريط الرسم البياني "
+},
+"Line Graph" : {
+    "1" : "خط الرسم البياني "
+},
+"DailyError" : {
+    "1" : ". الدولة المختارة لم تقدم إحصائيات اليوم حتى الآن"
+},
+"Wiki" : {
+    "1" : "المعرفه"
+},
+"About" : {
+    "1" : "حول"
+},
+"Contact" : {
+    "1" : "اتصل بنا"
+},
+"Statics" : {
+    "1" : "الإحصاء"
+},
+"Title" : {
+    "1" : "ما هو فيروس كورونا؟",
+    "2" : "فيروسات كورونا هي سلالة واسعة من الفيروسات التي قد تسبب المرض للحيوان والإنسان. ومن المعروف أن عدداً من فيروسات كورونا تسبب لدى البشر أمراض تنفسية تتراوح حدتها من نزلات البرد الشائعة إلى الأمراض الأشد وخامة مثل متلازمة الشرق الأوسط التنفسية (ميرس) والمتلازمة التنفسية الحادة الوخيمة (سارس). ويسبب فيروس كورونا المُكتشف مؤخراً مرض كوفيد-۱۹",
+    "3" : "? ما نحتاج إلى معرفته عن كوفيد ۱۹",
+    "4" : ": أعراض مرض كوفيد-۱۹ ",
+    "5" : ": كيف ينتشر كوفيد-۱۹",
+    "6" : ": نصائح لوقف انتقال كوفيد-۱۹",
+    "7" : ": معززات جهاز المناعة",
+    "8" : "! اغسل يديك بالصابون",
+    "9" : ": من هو الأكثر عرضة لخطر  كوفيد-۱۹",
+    "10" : "!!! البقاء في المنزل",
+    "11" : ": التوصيات"
+}, 
+"Symptoms" : {
+    "1" : "الحمى",
+    "2" : " ‏ والسعال الجاف",
+    "3" : "والإرهاق" ,
+    "4" : "الآلام والأوجاع" ,
+    "5" : "واحتقان الأنف",
+    "6" : "‏والصداع",
+    "7" : "والتهاب الملتحمة‏",
+    "8" : "وألم الحلق",
+    "9" : "والإسهال",
+    "10" : "وفقدان حاسة الذوق أو الشم",
+    "11" : "وظهور طفح جلدي أو تغير لون أصابع اليدين أو القدمين"
+},
+"Video" : {
+    "1" : "https://youtube.com/RNVakDz8LhI",
+    "2" : "https://youtube.com/C_7zjHnP4dg"
+},
+"Img" : {
+    "1" : "../Images/spread_ar.png",
+    "2" : "../Images/stop_spreading_ar.jpg",
+    "4" : "../Images/immune1_all.jpeg",
+    "5" : "../Images/immune2_all.jpeg",
+    "6" : "../Images/wash_your_hands_by_soap_all.png",
+    "7" : "../Images/high_risk_ar.jpg",
+    "8" : "../Images/stay_home_at.jpg",
+    "9" : "../Images/sugestion1_-en_all.jpg",
+    "10" : "../Imaegs/sugestion2_ar.png",
+    "11" : "../Images/sugestion4_ar.png"
+},
+"Contactus" : {
+    "1" : "اتصل بنا :",
+    "2" : "! كنا نحب أن نسمع منك",
+    "3" : "اسمك",
+    "4" : "بريدك الالكتروني",
+    "5" : "موضوع",
+    "7" : "ردود الفعل",
+    "6" : "إختر خيارا",
+    "8" : "الإبلاغ عن خطأ",
+    "9" : "طلب المواصفات",
+    "10" : "رسالة",
+    "11" : "إرسال"
+},
+"Aboutus" : {
+    "1" : "حول",
+    "2" : "الذين طوروا هذا الموقع",
+    "3" : {
+        "1" : "تم تطوير هذا الموقع من قبل ",
+        "2" : "أمير حسين .",
+        "3" : "أنا طالب في المرحلة المتوسطة وأنا لاجئ في",
+        "4" : "أثينا، اليونان",
+        "5" : "أنا أدرس تطوير الويب الكامل للمكدس في",
+        "6" : "Social Hackers Academy ."
+    },
+    "4" : ": إنه أول مشروع لتطبيقات الويب ، وهذا هو الشيء الذي استخدمته لإنشاء هذا الموقع",
+    "5" : {
+        "1" :"جافا سكريبت",
+        "2" : "ریاکت جی اس",
+        "3" : "۵ اچ تی ام ال",
+        "4" : "سی اس اس ۳",
+        "5" : "بوت استرپ"
+    },
+    "6" : {
+        "1" : "لقد بدأت تعلم البرمجة في",
+        "2" : "۶/۲۰۱۹",
+        "3" : ".... ولا يزال يتعلم"
+    },
+    "7" : "لماذا صنعت هذا الموقع",
+    "8" : {
+        "1" : "عندما رأيت أن كوفيد-۱۹ بدأ ينتشر أكثر فأكثر وبدأ العلماء يحاولون صنع لقاح لـ كوفيد-۱۹ وأبلغوا العالم أنه يمكن أن يستغرق وقتًا طويلاً للغاية ، فهمت أن",
+        "2" : ". نحتاج أن نتعلم كيف نعيش بأمان عن طريق كوفيد-۱۹",
+        "3" : ". هذا هو سبب جعل هذا الموقع"
+    },
+    "9" : ".هذا واجب إنساني على كل شخص للمساعدة في القضاء علىكوفيد-۱۹"
+},
+"footbar1" : {
+    "1" : "صممه أمير حسين",
+    "2" : "أنا طالب في المدرسة الإعدادية ، وقد درست تطوير الويب الكامل للمكدس في",
+    "3" : "Social Hackers Academy",
+    "4" : "."
+},
+"footbar2" : {
+    "1" : "الصفحات"
+},
+"footbar3" : {
+ "1" : "اتصل"
+},
+"footbar4" : {
+"1" : "لجوء، ملاذ",
+"2" : "Youtube",
+"3" : "Wikipedia",
+"4" : "world-heart-federation",
+"5" : "World Health Organization",
+"6" : "helpa-prometheus",
+"7" : "BBC",
+"8" : "Google Search"
+},
+"footbar5" : {
+    "1" : "شكر خاص",
+    "2" : "Social Hackers Academy ",
+    "3" : "AbdalRahman Hamami",
+    "4" : "Maria Pashalidou",
+    "5" : "Vadim Ovcearenco",
+    "6" : "Mohammad Sadegh Mousavi",
+    "7" : "Sara Mousavi"
+},
+"Select" : {
+"1" : "حدد الدولة"
+},
+"Donate" : {
+    "1" : "! ادعمني",
+    "2" : "ادعمني",
+    "3" : ":) مرحبًا ، أنا أمير حسين طالب لاجئ في اليونان. أحتاج دعمكم لتطوير هذا الموقع وجعله أفضل",
+    "4" : "Buy Me A Coffee",
+    "5" : "أو"
+},
+"Menu" : {
+    "1" : "قائمة طعام"
+}
+
+
+
+
+
+
+
+
+
+    ,
+    "Show more" :{
+        "1" : "Show More",
+        "2" : "Show More ..."
+    },
+    "Show less" : {
+        "1" : "Show Less"
+    },
+    "What is covid19" : {
+        "1" : "What Is COVID-19 ?",
+        "2" : "https://www.youtube.com/embed/i0ZabxXmH4Y",
+        "3" : "Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.",
+        "4" : "Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.",
+        "5" : "The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.",
+        "6" : "The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).",
+        "7" : "At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. COVID-media will continue to provide updated information as soon as clinical findings become available."
+    },
+    "Prevent getting sick" : {
+        "1" : "Prevent Getting Sick",
+        "How it spreads" : {
+        "2" : "How It Spreads",
+        "3" : "COVID-19 is thought to spread mainly through close contact from person-to-person. Some people without symptoms may be able to spread the virus. We are still learning about how the virus spreads and the severity of illness it causes.",
+        "4" : "Person-to-person spread",
+        "5" : "The virus is thought to spread mainly from person-to-person.",
+        "6" : "Between people who are in close contact with one another (within about 6 feet).",
+        "7" : "Through respiratory droplets produced when an infected person coughs, sneezes, or talks.",
+        "8" : "These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into the lungs.",
+        "9" : "COVID-19 may be spread by people who are not showing symptoms.",
+        "10" : "The virus spreads easily between people",
+        "11" : "How easily a virus spreads from person-to-person can vary. Some viruses are highly contagious, like measles, while other viruses do not spread as easily. Another factor is whether the spread is sustained, which means it goes from person-to-person without stopping.",
+        "12" : "The virus that causes COVID-19 is spreading very easily and sustainably between people",
+        "13" : ". Information from the ongoing COVID-19 pandemic suggests that this virus is spreading more efficiently than influenza, but not as efficiently as measles, which is highly contagious. In general, ",
+        "14" : "the more closely a person interacts with others and the longer that interaction, the higher the risk of COVID-19 spread",
+        "15" : ".",
+        "16" : "The virus may be spread in other ways",
+        "17" : "It may be possible that a person can get COVID-19 by ",
+        "18" : "touching a surface or object that has the virus on it ",
+        "19" : "and then touching their own mouth, nose, or possibly their eyes. This is not thought to be the main way the virus spreads, but we are still learning more about how this virus spreads.",
+        "20" : "Spread between animals and people",
+        "21" : {
+            "1" : "At this time, the risk of COVID-19 spreading ",
+            "2" : "from animals to people ",
+            "3" : "is considered to be low. Learn about "
+        },
+        "22" : "COVID-19 and pets and other animals",
+        "23" : "https://www.cdc.gov/coronavirus/2019-ncov/animals/pets-other-animals.html",
+        "24" : "It appears that the virus that causes COVID-19 can spread ",
+        "25" : "from people to animals ",
+        "26" : "in some situations. ",
+        "27" : "CDC ",
+        "28" : "https://www.cdc.gov/",
+        "29" : "is aware of a small You can take steps to slow the spread. number of pets worldwide, including cats and dogs, reported to be infected with the virus that causes COVID-19, mostly after close contact with people with COVID-19. Learn what you should do ",
+        "30" : "if you have pets",
+        "31" : "https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/pets.html",
+        "32" : ".",
+        "33" : "Protect yourself and others",
+        "34" : "The best way to prevent illness is to avoid being exposed to this virus",
+        "35" : ". ",
+        "36" : "You can take steps to slow the spread.",
+        "37" : "Maintain good social distance ",
+        "38" : "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/social-distancing.html",
+        "39" : "(about 6 feet). This is very important in preventing the spread of COVID-19.",
+        "40" : "Wash your hands ",
+        "41" : "https://www.cdc.gov/handwashing/when-how-handwashing.html",
+        "42" : "often with soap and water. If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol.",
+        "43" : "Routinely clean and disinfect ",
+        "44" : "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/disinfecting-your-home.html",
+        "45" : "frequently touched surfaces.",
+        "46" : "Cover your mouth and nose with a ",
+        "47" : "mask ",
+        "48" : "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html",
+        "49" : "when around others.",
+        "50" : "Learn more about what you can do to ",
+        "51" : "protect yourself and others",
+        "52" : "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html",
+        "53" : "."
+        }
+    },
+    "Translate" : {
+        "1" : "did not translated yet"
+    }
+}
