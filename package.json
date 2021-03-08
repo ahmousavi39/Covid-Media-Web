@@ -13,6 +13,7 @@
     "chart.js": "^2.9.4",
     "classnames": "^2.2.6",
     "country-code-lookup": "0.0.17",
+    "emailjs-com": "^2.6.4",
     "fusioncharts": "^3.16.0",
     "i18next": "^17.0.14",
     "i18next-browser-languagedetector": "^3.0.3",

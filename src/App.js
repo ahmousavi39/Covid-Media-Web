@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Cards, CountryPicker, Map, Navigation, Footer } from './components';
+import { Cards, CountryPicker, Map, Navigation, Footer, OnlyMap } from './components';
 import { HistoricalData, Chart } from './components';
 import styles from './App.module.css';
 import { fetchData, fetchHistoricalData } from './api';
@@ -110,9 +110,17 @@ export default function App() {
   return (
     <Router >
       <Switch>
+
+        
       <Route path="/en/app/map/only">
-          <Map />
+          <OnlyMap />
         </Route>
+
+        <Route path="/en/app/contact/only">
+          <Contact />
+        </Route>
+
+
         <Route path="/en/about">
           <div className={styles.container}>
             <img id="top" className={styles.image} src={t('logo.1')} />

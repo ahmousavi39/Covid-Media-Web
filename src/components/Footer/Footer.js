@@ -93,9 +93,9 @@ export default function Footer() {
             <p>
               <i className="fas fa-home mr-3" /> Budingen, Hessen, Germany</p>
             <p>
-              <i className="fas fa-envelope mr-3" /> m.amirhossein2005@gmail.com</p>
+              <i className="fas fa-envelope mr-3" id="email"/> m.amirhossein2005@gmail.com</p>
             <p>
-              <i className="fas fa-phone mr-3" /> +49 1636252607</p>
+              <i className="fas fa-phone mr-3" id="phone"/> +49 1636252607</p>
           </div>
         </div>
         <p style={{textAlign: 'center'}}>Design and managed by <a href="https://amirhossein.netlify.app"><strong>Amirhossein Mousavi</strong></a></p>
