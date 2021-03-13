@@ -1738,7 +1738,13 @@
     },
     "ChartType": {
         "1" : "Global line chart of Cases, Deaths, and Recovered cases of every day from start of COVID-19.",
-        "2" : "Bar chart of Cases, Deaths, and Recovered cases."
+        "2" : "Bar chart of Cases, Deaths, and Recovered cases.",
+        "3" : "Line chart of vaccination statistics, from the beginning of vaccination start."
+    },
+    "Vaccine": {
+        "1": "Vaccinated",
+        "2": "Congratulations!",
+        "3": "Not Provided Yet!"
     },
     "Translate": {
         "1" : true,

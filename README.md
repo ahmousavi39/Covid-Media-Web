@@ -1,7 +1,7 @@
 Covid Media
 Covid Media is a project, tyring to help the world specially refugees during the COVID-19 pandeimc,
 
-The web app, Android app, and IOS app is developed with React.S
+The web app, Android app, and IOS app is developed with React.
 
 Dependencies:
 1. @material-ui/core: ^4.11.3
@@ -31,4 +31,5 @@ Used API's:
 2. For getting country statics from start of COVID-19 day-by-day (for historical chart): https://disease.sh/v3/covid-19/historical/{country}?lastdays=all`
 4. For getting global & today global statics from start of COVID-19: https://corona.lmao.ninja/v3/covid-19/all
 5. For getting country & today country statics from start of COVID-19: https://corona.lmao.ninja/v3/covid-19/countries/{country}
-
+6. For getting global & today global statics of vaccineation statics from start of vaccination day-by-day: https://disease.sh/v3/covid-19/vaccine/coverage?lastdays=all
+7. For getting country & today country statics of vaccineation statics from start of vaccination day-by-day: https://disease.sh/v3/covid-19/vaccine/coverage/countries/{country}?lastdays=all

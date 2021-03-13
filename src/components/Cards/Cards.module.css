@@ -31,6 +31,10 @@
 .deaths{
   border-bottom: 10px solid rgb(255, 3, 3);
 }
+
+.vaccine{
+  border-bottom: 10px solid rgba(146, 144, 144, 0.219);
+}
 .active{
   border-bottom: 10px solid yellow;
 }

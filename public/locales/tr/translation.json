@@ -1757,7 +1757,13 @@
     },
     "ChartType": {
         "1" : "Vakaların, Ölümlerin ve Kurtarılanların çubuk grafiği.",
-        "2" : "Vakaların, Ölümlerin ve Kurtarılan vakaların çubuk grafiği."
+        "2" : "Vakaların, Ölümlerin ve Kurtarılan vakaların çubuk grafiği.",
+        "3" : "Aşılama başlangıcından itibaren aşılama istatistiklerinin çizgi grafiği."
+    },
+    "Vaccine": {
+        "1": "Aşılanmış",
+        "2": "Tebrikler!",
+        "3": "Henüz Sağlanmadı!"
     }
     
 }

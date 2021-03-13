@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { Line } from '@reactchartjs/react-chart.js'
 import styles from './Chart.module.css';
 import { useTranslation } from 'react-i18next';
 import CanvasJSReact from '../../canvasjs-stock-1.2.10/canvasjs.stock.react';
@@ -91,12 +92,52 @@ export function HistoricalData(props) {
             />
           }
         </div>
-        <ul style={{marginTop: 20}}>
+        <ul style={{ marginTop: 20 }}>
           <li>{t('ChartType.1')}</li>
         </ul>
       </>
     ) : (<b></b>)
   );
+}
+
+
+export function HistoricalVaccine(props) {
+  const { t } = useTranslation();
+
+  const data = {
+    labels: props.vaccineData[1],
+    datasets: [
+      {
+        label: t('Vaccine.1'),
+        data: props.vaccineData[0],
+        fill: false,
+        backgroundColor: 'pink',
+        borderColor: 'rgba(146, 144, 144, 0.219)',
+      },
+    ],
+  }
+
+  const options = {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  }
+  return (
+    <>
+    <div className={styles.container}>
+      <Line data={data} options={options} />
+      </div>
+      <ul style={{ marginTop: 20 }}>
+        <li>{t('ChartType.1')}</li>
+      </ul>
+    </>
+  )
 }
 
 
@@ -111,7 +152,7 @@ export function Chart(
     recovered,
     todayRecovered,
     active },
-    country, isDaily }
+    country, isDaily, vaccineData }
 ) {
 
   const { t } = useTranslation();
@@ -122,11 +163,11 @@ export function Chart(
         <Bar
           data={
             {
-              labels: [t('con.1'), t('rec.1'), t('dea.1'), t('Active.1')],
+              labels: [t('con.1'), t('rec.1'), t('Vaccine.1'), t('dea.1'), t('Active.1')],
               datasets: [{
                 label: t('peo.1'),
-                backgroundColor: ['rgba(0,0,255,0.5', 'rgba(0,255,0,0.5)', 'rgb(255, 3, 3)', 'yellow', 'blue'],
-                data: [cases, recovered, deaths, active]
+                backgroundColor: ['rgba(0,0,255,0.5', 'rgba(0,255,0,0.5)', 'rgba(146, 144, 144, 0.219)', 'rgb(255, 3, 3)', 'yellow', 'blue'],
+                data: [cases, recovered, vaccineData.allCases.cases, deaths, active]
               }]
             }}
           options={{
@@ -134,7 +175,7 @@ export function Chart(
             title: { display: true, text: `${country}` },
           }}
         />
-        <ul style={{marginTop: 20}}>
+        <ul style={{ marginTop: 20 }}>
           <li>{t('ChartType.2')}</li>
         </ul>
       </>
@@ -150,11 +191,11 @@ export function Chart(
         <Bar
           data={
             {
-              labels: [t('con.1'), t('rec.1'), t('dea.1')],
+              labels: [t('con.1'), t('rec.1'), t('Vaccine.1'), t('dea.1')],
               datasets: [{
                 label: t('peo.1'),
-                backgroundColor: ['rgba(0,0,255,0.5', 'rgba(0,255,0,0.5)', 'rgb(255, 3, 3)'],
-                data: [todayCases, todayRecovered, todayDeaths]
+                backgroundColor: ['rgba(0,0,255,0.5', 'rgba(0,255,0,0.5)', 'rgba(146, 144, 144, 0.219)', 'rgb(255, 3, 3)'],
+                data: [todayCases, todayRecovered, vaccineData.todayCases.cases, todayDeaths]
               }]
             }}
           options={{
@@ -162,9 +203,9 @@ export function Chart(
             title: { display: true, text: `${country}` },
           }}
         />
-        <ul style={{marginTop: 20}}>
-            <li>{t('ChartType.2')}</li>
-          </ul>
+        <ul style={{ marginTop: 20 }}>
+          <li>{t('ChartType.2')}</li>
+        </ul>
       </>
     ) : (<b>{t('DailyError.1')}</b>)
   )
@@ -177,6 +218,7 @@ export function Chart(
         isDaily ? barChartDaily : barChart
       }
     </div>
+
   )
 }
 

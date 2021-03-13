@@ -1,11 +1,10 @@
 import React, { Component, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Cards, CountryPicker, Map, Navigation, Footer, OnlyMap } from './components';
-import { HistoricalData, Chart } from './components';
+import { Cards, CountryPicker, Map, Navigation, Footer, OnlyMap, HistoricalData, Chart, HistoricalVaccine } from './components';
 import styles from './App.module.css';
-import { fetchData, fetchHistoricalData } from './api';
+import { fetchData, fetchHistoricalData, fetchVacineData } from './api';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Contact, Wiki, About, Critical, Refugees } from "./components/Routing"
+import { Contact, Wiki, About, Critical, Refugees,ContactApp } from "./components/Routing"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
 import ReactGA from "react-ga";
@@ -22,22 +21,29 @@ export class Render extends React.Component {
   state = {
     data: {},
     historicalDataState: [],
+    vaccineData: {},
+    historicalDataVaccine: [],
     country: ''
   }
 
   async componentDidMount() {
     const fetchedData = await fetchData();
     const fetchedHistoricalData = await fetchHistoricalData();
-    this.setState({ data: fetchedData, historicalDataState: fetchedHistoricalData });
+    const fetchedVacineData = await fetchVacineData();
+
+    this.setState({ data: fetchedData, historicalDataState: fetchedHistoricalData, vaccineData: fetchedVacineData, historicalDataVaccine: fetchedVacineData.allDaysCases });
   }
 
   handleCountryChange = async (country) => {
     const fetchedData = await fetchData(country);
     const fetchedHistoricalData = await fetchHistoricalData(country);
-    this.setState({ data: fetchedData, historicalDataState: fetchedHistoricalData });
+    const fetchedVacineData = await fetchVacineData(country);
+
+    this.setState({ data: fetchedData, historicalDataState: fetchedHistoricalData, vaccineData: fetchedVacineData, historicalDataVaccine: fetchedVacineData.allDaysCases });
   }
+
   render() {
-    const { data, country, historicalDataState } = this.state;
+    const { data, country, historicalDataVaccine, historicalDataState } = this.state;
     if (!this.state.isDaily) {
       return (
         <div className={styles.container}>
@@ -51,14 +57,14 @@ export class Render extends React.Component {
                 aria-controls="pills-profile" aria-selected="false">{this.props.today}</a>
             </li>
           </ul>
-        <div style={{  maxWidth: "1140px"}}>
-          <Cards isDaily={this.state.isDaily} data={data} />
+          <div style={{ maxWidth: "1140px" }}>
+            <Cards isDaily={this.state.isDaily} data={data} vaccineData={this.state.vaccineData} />
           </div>
           <CountryPicker country={this.state.country} handleCountryChange={this.handleCountryChange} />
           <HistoricalData data={historicalDataState} />
-
+          <HistoricalVaccine vaccineData={historicalDataVaccine} />
           <br />
-          <Chart isDaily={this.state.isDaily} data={data} country={country} />
+          <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} />
 
         </div>
       )
@@ -76,9 +82,9 @@ export class Render extends React.Component {
             </li>
           </ul>
 
-          <Cards isDaily={this.state.isDaily} data={data} />
+          <Cards isDaily={this.state.isDaily} data={data} vaccineData={this.state.vaccineData} />
           <CountryPicker country={this.state.country} handleCountryChange={this.handleCountryChange} />
-          <Chart isDaily={this.state.isDaily} data={data} country={country} />
+          <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} />
         </div>
       )
     }
@@ -111,13 +117,13 @@ export default function App() {
     <Router >
       <Switch>
 
-        
-      <Route path="/en/app/map/only">
-          <OnlyMap />
+
+        <Route path="/en/app/map/only">
+            <OnlyMap />
         </Route>
 
         <Route path="/en/app/contact/only">
-          <Contact />
+          <ContactApp />
         </Route>
 
 
