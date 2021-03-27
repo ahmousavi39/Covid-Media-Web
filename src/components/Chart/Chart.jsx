@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Line } from '@reactchartjs/react-chart.js'
+import { Line, HorizontalBar } from '@reactchartjs/react-chart.js'
 import styles from './Chart.module.css';
 import { useTranslation } from 'react-i18next';
 import CanvasJSReact from '../../canvasjs-stock-1.2.10/canvasjs.stock.react';
+// import ChartRace from 'react-chart-race';
 
-var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSStockChart = CanvasJSReact.CanvasJSStockChart;
 
 
@@ -96,7 +96,9 @@ export function HistoricalData(props) {
           <li>{t('ChartType.1')}</li>
         </ul>
       </>
-    ) : (<b></b>)
+    ) : ((<b><div class="spinner-border" role="status">
+      <span class="sr-only"></span>
+    </div></b>))
   );
 }
 
@@ -129,18 +131,18 @@ export function HistoricalVaccine(props) {
     },
   }
   return (
-    <>
-    <div className={styles.container}>
-      <Line data={data} options={options} />
-      </div>
-      <ul style={{ marginTop: 20 }}>
-        <li>{t('ChartType.1')}</li>
-      </ul>
-    </>
+    props.vaccineData[0] !== undefined ?
+      (<>
+        <div className={styles.container}>
+          <Line data={data} options={options} />
+        </div>
+        <ul style={{ marginTop: 20 }}>
+          <li>{t('ChartType.1')}</li>
+        </ul>
+      </>) :
+      (<b></b>)
   )
 }
-
-
 
 
 export function Chart(
@@ -179,9 +181,9 @@ export function Chart(
           <li>{t('ChartType.2')}</li>
         </ul>
       </>
-    ) : (<b><div class="spinner-border" role="status">
-      <span class="sr-only"></span>
-    </div></b>)
+    ) : (<div class="spinner-border" style={{ marginRight: 'auto', marginLeft: 'auto' }} role="status">
+      <b><span class="sr-only"></span></b>
+    </div>)
   )
 
 
@@ -223,3 +225,96 @@ export function Chart(
 }
 
 
+export function VaccineCountries(props) {
+  let statics = props.vaccineDataCountries.statics;
+  let countries = props.vaccineDataCountries.countries;
+  let population = props.vaccineDataCountries.population;
+  let percent = props.vaccineDataCountries.percent;
+
+  if (population !== undefined) {
+    population.length = 30;
+    countries.length = 30;
+    statics.length = 30;
+    percent.length = 30;
+  }
+  const data = {
+    labels: countries,
+    datasets: [
+      {
+        label: 'Vaccined',
+        data: statics,
+        backgroundColor: 'green',
+        borderColor: 'green',
+        borderWidth: 1,
+      },
+      {
+        label: 'Population',
+        data: population,
+        backgroundColor: 'red',
+        borderColor: 'red',
+        borderWidth: 1,
+      },
+      {
+        label: 'Vaccined %',
+        data: percent,
+        backgroundColor: 'blue',
+        borderColor: 'blue',
+        borderWidth: 1,
+      }
+    ],
+  };
+
+
+  const options = {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  };
+  let containerProps;
+  if (window.innerWidth < 450) {
+    containerProps = {
+      width: "100%",
+      height: "300px"
+    };
+  } else {
+    containerProps = {
+      width: "100%",
+      height: "150px"
+    };
+  }
+
+  return (
+    props.vaccineDataCountries.statics ? (
+      <HorizontalBar height={containerProps.height} width={containerProps.width} data={data} options={options} />
+    ) : ((<div class="spinner-border" style={{ marginRight: 'auto', marginLeft: 'auto' }} role="status">
+      <b><span class="sr-only"></span></b>
+    </div>))
+  )
+}
+
+
+export function RaceChart() {
+  return (
+    true == true ? 
+    // <ChartRace data={[
+    //   { id: 0, title: 'Ayfonkarahisar', value: 42, color: '#50c4fe' },
+    //   { id: 1, title: 'Kayseri', value: 38, color: '#3fc42d' },
+    //   { id: 2, title: 'Muğla', value: 76, color: '#c33178' },
+    //   { id: 3, title: 'Uşak', value: 30, color: '#423bce' },
+    //   { id: 4, title: 'Sivas', value: 58, color: '#c8303b' },
+    //   { id: 5, title: 'Konya', value: 16, color: '#2c2c2c' },
+    //   { id: 0, title: 'Ayfonkarahisar', value: 100, color: '#50c4fe' },
+    //   { id: 0, title: 'Ayfonkarahisar', value: 10, color: '#50c4fe' },
+    //   { id: 0, title: 'Ayfonkarahisar', value: 500, color: '#50c4fe' },
+    // ]} />
+    <p> Race Chart will be here </p>
+    :
+    <b>Loading....</b>
+    )
+}

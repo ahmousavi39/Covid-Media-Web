@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { Card, CardContent, Typography, Grid, StylesProvider } from '@material-ui/core'
+import React from 'react';
+import { Card, CardContent, Typography, Grid } from '@material-ui/core'
 import styles from './Cards.module.css';
 import CountUp from 'react-countup';
 import cx from 'classnames';
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 const Cards = (props) => {
     const { t } = useTranslation();

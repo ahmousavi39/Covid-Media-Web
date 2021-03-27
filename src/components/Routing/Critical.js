@@ -174,7 +174,7 @@ const Stay_safe = () => {
 }
 
 const Infected = () => {
-  const [open, setOpen] = useState({ Critical: false, Stay_safe: false });
+  const [open, setOpen] = useState({ Critical: false, StaySafe: false });
   const { t } = useTranslation();
 
   const Critical = () => {
@@ -205,8 +205,8 @@ const Infected = () => {
       <hr />
 
       <div id='get_better' >
-        <li onClick={() => { setOpen({ Stay_safe: !open.Stay_safe }) }} className={styles.medium_title} >{t('Critical.13')}<br /><span className={styles.span}>{!open.Stay_safe ? t('Show more.2') : t('Show more.1')}</span></li>
-        <Collapse in={open.Stay_safe}>
+        <li onClick={() => { setOpen({ StaySafe: !open.StaySafe }) }} className={styles.medium_title} >{t('Critical.13')}<br /><span className={styles.span}>{!open.StaySafe ? t('Show more.2') : t('Show more.1')}</span></li>
+        <Collapse in={open.StaySafe}>
           <div>
             <Stay_safe />
           </div>
@@ -231,10 +231,10 @@ export default function Critical() {
 
 
       <div id='test' >
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">{t('Critical.3')}</h4>
-            <a onClick={() => { setOpen({ Test: !open.Test }) }} class="btn btn-primary">{!open.Test ? t('Show more.1') : t('Show more.1')}</a>
+        <div className="card">
+          <div className="card-body">
+            <h4 className="card-title">{t('Critical.3')}</h4>
+            <a href='#' onClick={() => { setOpen({ Test: !open.Test }) }} style={{borderRadius: 5, padding: 10}} className="btn btn-primary">{!open.Test ? t('Show more.1') : t('Show more.1')}</a>
 
             <Collapse in={open.Test}>
               <div>
@@ -253,10 +253,10 @@ export default function Critical() {
 
 
       <div id='infected' >
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">{t('Critical.4')}</h4>
-            <a onClick={() => { setOpen({ Infected: !open.Infected }) }} class="btn btn-primary">{!open.Infected ? t('Show more.1') : t('Show more.1')}</a>
+        <div className="card">
+          <div className="card-body">
+            <h4 className="card-title">{t('Critical.4')}</h4>
+            <a onClick={() => { setOpen({ Infected: !open.Infected }) }} style={{borderRadius: 5, padding: 10}} className="btn btn-primary">{!open.Infected ? t('Show more.1') : t('Show more.1')}</a>
 
             <Collapse in={open.Infected}>
               <div>

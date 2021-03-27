@@ -4,6 +4,19 @@ const url = "https://corona.lmao.ninja/v3/covid-19";
 const urlHisory = 'https://disease.sh/v3/covid-19/historical'
 const urlVacine = 'https://disease.sh/v3/covid-19/vaccine/coverage';
 
+
+const fetchPopulatoin = async () => {
+    let populationData = [];
+    try {
+        const { data } = await axios.get(`${url}/countries`)
+        data.map(value => { populationData.push({ "population": value.population, "country": value.country }) });
+        return populationData;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 export const fetchData = async (country) => {
     let changeableUrl = `${url}/all`;
     if (country) {
@@ -80,16 +93,25 @@ export const fetchHistoricalData = async (country) => {
 
         for (const [key, value] of Object.entries(data.deaths)) {
             deathsArray.push(value);
+            if (!key) {
+                console.log('error')
+            }
         }
 
         for (const [key, value] of Object.entries(data.recovered)) {
             recoveredArray.push(value);
+            if (!key) {
+                console.log('error')
+            }
         }
+
+        var splitted;
+        var dateStr;
 
         casesArray.map((value, index) => {
             if (index === 0) {
-                var splitted = dateArray[index].split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+                splitted = dateArray[index].split("/");
+                dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
                 newCasesArray.push({ 'x': dateFinal, 'y': value });
             } else {
@@ -97,17 +119,18 @@ export const fetchHistoricalData = async (country) => {
                 let lastIndexValue = casesArray[lastIndex];
                 let newIndexValue = value - lastIndexValue;
 
-                var splitted = dateArray[index].split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+                splitted = dateArray[index].split("/");
+                dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
                 newCasesArray.push({ 'x': dateFinal, 'y': newIndexValue });
             }
+            return;
         })
 
         deathsArray.map((value, index) => {
             if (index === 0) {
-                var splitted = dateArray[index].split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+                splitted = dateArray[index].split("/");
+                dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
                 newDeathsArray.push({ 'x': dateFinal, 'y': value });
             } else {
@@ -115,17 +138,18 @@ export const fetchHistoricalData = async (country) => {
                 let lastIndexValue = deathsArray[lastIndex];
                 let newIndexValue = value - lastIndexValue;
 
-                var splitted = dateArray[index].split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+                splitted = dateArray[index].split("/");
+                dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
                 newDeathsArray.push({ 'x': dateFinal, 'y': newIndexValue });
             }
+            return;
         })
 
         recoveredArray.map((value, index) => {
             if (index === 0) {
-                var splitted = dateArray[index].split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+                splitted = dateArray[index].split("/");
+                dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
                 newRecoveredArray.push({ 'x': dateFinal, 'y': value });
             } else {
@@ -156,11 +180,12 @@ export const fetchHistoricalData = async (country) => {
                 } else {
                     newIndexValue = value - lastIndexValue;
                 }
-                var splitted = dateArray[index].split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+                splitted = dateArray[index].split("/");
+                dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
                 newRecoveredArray.push({ 'x': dateFinal, 'y': newIndexValue });
             }
+            return;
         })
 
         return [newCasesArray, newDeathsArray, newRecoveredArray];
@@ -168,6 +193,54 @@ export const fetchHistoricalData = async (country) => {
         console.log(error);
     }
 }
+
+
+
+export const fetchVaccineCountries = async () => {
+    let Url = `${urlVacine}/countries?lastdays=1`;
+
+
+    try {
+        const data = await axios.get(Url);
+        let useableData = data.data;
+        let fetchedPopulationUseable = await fetchPopulatoin();
+
+        let countries = [];
+        let statics = [];
+        let population = [];
+        let percent = [];
+
+        //Sorting coutries, more to less vaccinaltions
+        let currentDate = Object.keys(useableData[0].timeline);
+        let finalData = useableData.sort((a, b) => parseFloat(b.timeline[currentDate]) - parseFloat(a.timeline[currentDate]));
+
+        if ((await fetchedPopulationUseable).length > 100) {
+
+            finalData.map((value) => {
+                let popu = [];
+                let vaccines = [];
+                fetchedPopulationUseable.map(popuValue => {
+                    if (value.country == popuValue.country) {
+                        popu = popuValue.population;
+                        population.push(popuValue.population)
+                    }
+                });
+                countries.push(value.country);
+                for (const [key, returnValue] of Object.entries(value.timeline)) {
+                    vaccines = returnValue;
+                    statics.push(returnValue);
+                };
+                percent.push(Math.round(vaccines / popu * 100))
+            });
+
+        }
+
+        return { countries, statics, population, percent };
+
+    } catch (error) {
+        return error;
+    }
+};
 
 
 export const fetchVacineData = async (country) => {
@@ -185,28 +258,31 @@ export const fetchVacineData = async (country) => {
 
         let modifieData;
 
+        var splitted;
+        var dateStr;
+
         if (country) {
             typeof data.data.timeline === "object" ? modifieData = data.data.timeline : modifieData = data.data.message;
         } else {
             modifieData = data.data;
         }
 
-            for (const [key, value] of Object.entries(modifieData)) {
-                vaccineArray.push(value);
-                var splitted = key.split("/");
-                var dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
-                dateArray.push(dateStr);
-            }
+        for (const [key, value] of Object.entries(modifieData)) {
+            vaccineArray.push(value);
+            splitted = key.split("/");
+            dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
+            dateArray.push(dateStr);
+        }
 
 
         vaccineArray.map((value, i) => {
             if (i === 0) {
-                allDaysCases.push( value );
+                allDaysCases.push(value);
             } else {
                 let lastIndex = i - 1;
                 let lastIndexValue = vaccineArray[lastIndex];
                 let newIndexValue = value - lastIndexValue;
-                allDaysCases.push( newIndexValue )
+                allDaysCases.push(newIndexValue)
             }
         });
 
@@ -214,13 +290,30 @@ export const fetchVacineData = async (country) => {
         let todayCases = { cases: vaccineArray[vaccineArray.length - 1] - vaccineArray[vaccineArray.length - 2], updated: dateArray[dateArray.length - 1] };
 
         return { allCases, todayCases, "allDaysCases": [allDaysCases, dateArray] };
-    
+
     } catch (error) {
         console.log(error);
-        return { "allCases": {cases: 0, updated: new Date('0-0-0')}, "todayCases": {cases: 0, updated: new Date('0-0-0')}, "allDaysCases": {cases: 0, updated: new Date('0-0-0')} };
+        return { "allCases": { cases: 0, updated: new Date('0-0-0') }, "todayCases": { cases: 0, updated: new Date('0-0-0') }, "allDaysCases": { cases: 0, updated: new Date('0-0-0') } };
     }
 
 }
+
+export const raceChart = async () => {
+    
+    try {
+        const {data} = await axios.get(`${urlHisory}`);
+        const finalData = [];
+
+        data.map((value, i) => {
+            finalData.push({id: i, "title": value.country, "value": 0})
+        })
+        return data;
+    } catch(error) {
+        console.log(error);
+        return { "allCases": { cases: 0, updated: new Date('0-0-0') }, "todayCases": { cases: 0, updated: new Date('0-0-0') }, "allDaysCases": { cases: 0, updated: new Date('0-0-0') } };
+    }
+
+};
 
 
 export const fetchCountries = async () => {
