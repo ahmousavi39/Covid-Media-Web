@@ -150,7 +150,14 @@ size: 2px;
     color: blue ; 
     border: 4px solid rgb(255, 0, 0);
 }
-  
+
+/* @media(max-width : 770px){
+.mobileButtons{
+    margin-right: auto;
+    margin-left: auto;
+}
+} */
+
 @media(max-width : 770px){
 .youtube {
     width : 100%;

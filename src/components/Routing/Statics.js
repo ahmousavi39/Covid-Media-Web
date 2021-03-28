@@ -58,7 +58,7 @@ export class Statics extends React.Component {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
               <ul className="nav mb-3" role="tablist" >
                 <li id={!this.props.isDaily ? styles.blue : styles.white}>
-                  <a className="nav-link active" id="pills-home-tab" data-toggle="pill"  onClick={(e) => window.location.pathname = lan + '/statics/all/' + this.state.country} role="tab"
+                  <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={(e) => window.location.pathname = lan + '/statics/all/' + this.state.country} role="tab"
                     aria-controls="pills-home" aria-selected="true">{this.props.total}</a>
                 </li>
                 <li id={this.props.isDaily ? styles.blue : styles.white}>
@@ -74,44 +74,44 @@ export class Statics extends React.Component {
           </div>
 
           <CountryPicker country={country} handleCountryChange={this.handleCountryChange} />
-          
+
           <div style={{ width: '100%', paddingTop: '2%', paddingBottom: '3%' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-              <ul className="nav mb-3" role="tablist" >
-
-                <li id={this.state.openChart === 'Vaccine Historical' ? styles.blue : styles.white}>
-                  <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({openChart : 'Vaccine Historical'})} role="tab"
-                    aria-controls="pills-profile" aria-selected="false">Historical Vaccine</a>
-                </li>
-
-                <li id={this.state.openChart === 'Vaccine' ? styles.blue : styles.white}>
-                  <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({openChart : 'Vaccine'})} role="tab"
-                    aria-controls="pills-profile" aria-selected="false">Vaccine</a>
-                </li>
+              <ul className="nav mb-3" role="tablist" style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
 
                 <li id={this.state.openChart === 'Historical' ? styles.blue : styles.white}>
-                  <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={() => this.setState({openChart : 'Historical'})} role="tab"
-                    aria-controls="pills-home" aria-selected="true">Historical</a>
-                </li>
+                <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Historical' })} role="tab"
+                  aria-controls="pills-home" aria-selected="true">{this.props.chartTypes.historical}</a>
+              </li>
 
+              <li id={this.state.openChart === 'Vaccine Historical' ? styles.blue : styles.white}>
+                <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Vaccine Historical' })} role="tab"
+                  aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.historicalVaccine}</a>
+              </li>
+
+              <li id={this.state.openChart === 'Vaccine' ? styles.blue : styles.white}>
+                <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Vaccine' })} role="tab"
+                  aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.vaccine}</a>
+              </li>
+              <div className={styles.mobileButtons}>
                 <li id={this.state.openChart === 'Bar Chart' ? styles.blue : styles.white}>
-                  <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({openChart : 'Bar Chart'})} role="tab"
-                    aria-controls="pills-profile" aria-selected="false">Bar Chart</a>
+                  <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Bar Chart' })} role="tab"
+                    aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.barChart}</a>
                 </li>
 
-                <li id={this.state.openChart === 'Covid History' ? styles.blue : styles.white}>
+                {/* <li id={this.state.openChart === 'Covid History' ? styles.blue : styles.white}>
                   <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({openChart : 'Covid History'})} role="tab"
-                    aria-controls="pills-profile" aria-selected="false">Covid History</a>
-                </li>
-
+                    aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.covidHistory}</a>
+                </li> */}
+              </div>
               </ul>
-            </div>
           </div>
-
-
-          {this.state.openChart === 'Historical' ? <HistoricalData data={historicalDataState} /> : this.state.openChart === 'Vaccine Historical' ? <HistoricalVaccine vaccineData={historicalDataVaccine} /> : this.state.openChart === 'Vaccine' ? <VaccineCountries vaccineDataCountries={vaccineDataCountries} /> : this.state.openChart === "Bar Chart" ? <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} /> : this.state.openChart === 'Covid History' ? <RaceChart data={historicalDataState} /> : <p></p>}
-
         </div>
+
+
+          { this.state.openChart === 'Historical' ? <HistoricalData data={historicalDataState} /> : this.state.openChart === 'Vaccine Historical' ? <HistoricalVaccine vaccineData={historicalDataVaccine} /> : this.state.openChart === 'Vaccine' ? <VaccineCountries vaccineDataCountries={vaccineDataCountries} /> : this.state.openChart === "Bar Chart" ? <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} /> : this.state.openChart === 'Covid History' ? <RaceChart data={historicalDataState} /> : <p></p> }
+
+        </div >
       )
     } else {
       return (
@@ -130,8 +130,9 @@ export class Statics extends React.Component {
               </ul>
             </div>
           </div>
-
-          <Cards isDaily={this.state.isDaily} data={data} vaccineData={this.state.vaccineData} />
+          <div style={{ maxWidth: "1140px" }}>
+            <Cards isDaily={this.state.isDaily} data={data} vaccineData={this.state.vaccineData} />
+          </div>
           <CountryPicker country={this.state.country} handleCountryChange={this.handleCountryChange} />
           <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} />
         </div>

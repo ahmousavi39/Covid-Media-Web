@@ -224,49 +224,49 @@ export default function App() {
 
         <Route path={`/en/statics/today`}>
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
           <Footer />
         </Route>
 
         <Route path="/per/statics/today">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
           <Footer />
         </Route>
 
         <Route path="/gr/statics/today">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
           <Footer />
         </Route>
 
         <Route path="/tr/statics/today">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={true} />
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
           <Footer />
         </Route>
 
         <Route path="/en/statics/all">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
         <Route path="/tr/statics/all">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
         <Route path="/per/statics/all">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
         <Route path="/gr/statics/all">
             <Navigation />
-          <Statics total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
