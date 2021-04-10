@@ -8,8 +8,6 @@
 
 <img src="https://miro.medium.com/max/464/1*LxtdsVO0UnRDlrale42riQ.png" width="100px" height='70px' alt='Create React App'>
 
-<img src="https://pbs.twimg.com/profile_images/1273938647297994753/2mvrQgmu.jpg" width="100px" height='70px' alt='Email.js'>
-
 <img src="https://gblobscdn.gitbook.com/spaces%2F-L9iS6Wm2hynS5H9Gj7j%2Favatar.png" width="100px" height='70px' alt='i18next'>
 
 <img src="https://miro.medium.com/fit/c/1838/551/1*80J2Wa21DYXxMbbtBziJHg.png" width="100px" height='50px' alt='Axios'>
@@ -17,6 +15,8 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Mapbox_logo_2017.svg/1280px-Mapbox_logo_2017.svg.png" width="100px" height='40px' alt='MapBox'>
 
 <img src="https://www.chartjs.org/img/chartjs-logo.svg" width="100px" height='70px' alt='Chart.js'>
+
+<img src="https://pbs.twimg.com/profile_images/1273938647297994753/2mvrQgmu.jpg" width="100px" height='70px' alt='Email.js'>
 </p>
 
 # Covid Media
