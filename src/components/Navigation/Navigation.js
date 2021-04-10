@@ -3,7 +3,8 @@ import styles from './Navigation.module.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import Donate from '../Donate/Donate'
+import Donate from '../Donate/Donate';
+import {logoWhite} from '../../Images';
 
 export default function Navigation() {
 
@@ -38,7 +39,7 @@ export default function Navigation() {
   return (
     <div className='container'>
       <div className={styles.container}>
-        <img alt='Covid Media' id="top" className={styles.image}  src={t('logo.1')} />
+        <img id="top" className={styles.image} src={logoWhite} />
       </div>
       <br />
       <Navbar bg='dark' expand="lg" className={styles.topnav} >

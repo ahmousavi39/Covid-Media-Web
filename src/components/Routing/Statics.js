@@ -48,8 +48,33 @@ export class Statics extends React.Component {
     window.location.pathname = lan + '/statics/' + isDaily + '/' + country;
   }
 
-  render() {
+  
+
+  renderSwitch() {
     const { data, country, historicalDataVaccine, historicalDataState, vaccineDataCountries } = this.state;
+    switch(this.state.openChart) {
+      case 'Historical':
+          return <HistoricalData data={historicalDataState} />
+        break;
+      case 'Vaccine Historical':
+          return <HistoricalVaccine vaccineData={historicalDataVaccine} />
+        break;
+      case 'Vaccine':
+          return <VaccineCountries vaccineDataCountries={vaccineDataCountries} />
+        break;
+      case 'Bar Chart':
+          return <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} />
+        break;
+      case 'Covid History':
+          return <RaceChart data={historicalDataState} />
+        break;
+      default:
+          return <p></p>
+    } 
+  }
+
+  render() {
+    const { data, country } = this.state;
     if (!this.state.isDaily) {
       return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }} >
@@ -74,6 +99,7 @@ export class Statics extends React.Component {
           </div>
 
           <CountryPicker country={country} handleCountryChange={this.handleCountryChange} />
+
 
           <div style={{ width: '100%', paddingTop: '2%', paddingBottom: '3%' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
@@ -108,8 +134,7 @@ export class Statics extends React.Component {
           </div>
         </div>
 
-
-          { this.state.openChart === 'Historical' ? <HistoricalData data={historicalDataState} /> : this.state.openChart === 'Vaccine Historical' ? <HistoricalVaccine vaccineData={historicalDataVaccine} /> : this.state.openChart === 'Vaccine' ? <VaccineCountries vaccineDataCountries={vaccineDataCountries} /> : this.state.openChart === "Bar Chart" ? <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} /> : this.state.openChart === 'Covid History' ? <RaceChart data={historicalDataState} /> : <p></p> }
+        {this.renderSwitch()}
 
         </div >
       )

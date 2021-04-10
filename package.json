@@ -12,6 +12,7 @@
     "chart.js": "^2.9.4",
     "classnames": "^2.2.6",
     "country-code-lookup": "0.0.17",
+    "d3": "^6.6.1",
     "emailjs-com": "^2.6.4",
     "fusioncharts": "^3.16.0",
     "i18next": "^19.9.2",

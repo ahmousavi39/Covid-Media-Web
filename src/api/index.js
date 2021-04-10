@@ -299,21 +299,22 @@ export const fetchVacineData = async (country) => {
 }
 
 export const raceChart = async () => {
-    
+
     try {
-        const {data} = await axios.get(`${urlHisory}`);
+        const { data } = await axios.get(`${urlHisory}`);
         const finalData = [];
 
-        data.map((value, i) => {
-            finalData.push({id: i, "title": value.country, "value": 0})
+        data.map((value, index) => {
+            
         })
-        return data;
-    } catch(error) {
+        return finalData;
+    } catch (error) {
         console.log(error);
         return { "allCases": { cases: 0, updated: new Date('0-0-0') }, "todayCases": { cases: 0, updated: new Date('0-0-0') }, "allDaysCases": { cases: 0, updated: new Date('0-0-0') } };
     }
 
 };
+console.log(raceChart());
 
 
 export const fetchCountries = async () => {

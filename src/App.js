@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Map, Navigation, Footer, OnlyMap } from './components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Contact, About, Critical, ContactApp, EnVaccine, Statics, QuickWiki, AllWiki } from "./components/Routing"
 import { useTranslation } from 'react-i18next';
 import ReactGA from "react-ga";
+import Modal from "react-bootstrap/Modal";
 
 function initizeAnalytics() {
   ReactGA.initialize('UA-168910705-1')
@@ -15,7 +16,7 @@ const Change = () => {
   return;
 }
 
-const RedirectToStatics = ({lan}) => {
+const RedirectToStatics = ({ lan }) => {
   window.location.pathname = lan + '/statics/all';
   return;
 }
@@ -27,6 +28,29 @@ const Change1 = () => {
 }
 
 
+function DonatePopUp() {
+  const [show, setShow] = useState(true);
+
+  const handleClose = () => setShow(false);
+
+  return (
+    <>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Help us make the Covid Media mobile app available!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>We need your donation to make the Covid Media mobile app online!<br /> Our needed amount is <strong>120 Euro</strong>.</Modal.Body>
+        <Modal.Footer>
+          <button type="button" class="btn btn-outline-primary" onClick={handleClose} style={{ borderRadius: '10px' }}>Close</button>
+          <button type="button" class="btn btn-primary" onClick={() => {
+            window.open("https://www.paypal.me/mamirhossein2005");
+            handleClose();
+          }} style={{ borderRadius: '10px' }}>Donate</button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
 export default function App() {
 
@@ -47,7 +71,7 @@ export default function App() {
         </Route>
 
         <Route exact path="/tr">
-          <RedirectToStatics lan='tr'/>
+          <RedirectToStatics lan='tr' />
         </Route>
 
         <Route exact path="/gr" lan='gr'>
@@ -71,25 +95,25 @@ export default function App() {
         </Route>
 
         <Route path="/en/about">
-            <Navigation />
+          <Navigation />
           <About />
           <Footer />
         </Route>
 
         <Route path="/per/about">
-            <Navigation />
+          <Navigation />
           <About />
           <Footer />
         </Route>
 
         <Route path="/tr/about">
-            <Navigation />
+          <Navigation />
           <About />
           <Footer />
         </Route>
 
         <Route path="/gr/about">
-            <Navigation />
+          <Navigation />
           <About />
           <Footer />
         </Route>
@@ -105,49 +129,49 @@ export default function App() {
         </Route>
 
         <Route path="/en/wiki/all">
-            <Navigation />
+          <Navigation />
           <AllWiki />
           <Footer />
         </Route>
 
         <Route path="/en/wiki/quick">
-            <Navigation />
+          <Navigation />
           <QuickWiki />
           <Footer />
         </Route>
 
         <Route path="/tr/wiki/all">
-            <Navigation />
+          <Navigation />
           <AllWiki />
           <Footer />
         </Route>
 
         <Route path="/tr/wiki/quick">
-            <Navigation />
+          <Navigation />
           <QuickWiki />
           <Footer />
         </Route>
 
         <Route path="/gr/wiki/all">
-            <Navigation />
+          <Navigation />
           <QuickWiki />
           <Footer />
         </Route>
 
         <Route path="/gr/wiki/quick">
-            <Navigation />
+          <Navigation />
           <QuickWiki />
           <Footer />
         </Route>
 
         <Route path="/per/wiki/all">
-            <Navigation />
+          <Navigation />
           <AllWiki />
           <Footer />
         </Route>
 
         <Route path="/per/wiki/quick">
-            <Navigation />
+          <Navigation />
           <QuickWiki />
           <Footer />
         </Route>
@@ -158,25 +182,25 @@ export default function App() {
         </Route>
 
         <Route path="/en/contact">
-            <Navigation />
+          <Navigation />
           <Contact />
           <Footer />
         </Route>
 
         <Route path="/tr/contact">
-            <Navigation />
+          <Navigation />
           <Contact />
           <Footer />
         </Route>
 
         <Route path="/gr/contact">
-            <Navigation />
+          <Navigation />
           <Contact />
           <Footer />
         </Route>
 
         <Route path="/per/contact">
-            <Navigation />
+          <Navigation />
           <Contact />
           <Footer />
         </Route>
@@ -188,25 +212,25 @@ export default function App() {
         </Route>
 
         <Route path="/en/map">
-            <Navigation />
+          <Navigation />
           <Map />
           <Footer />
         </Route>
 
         <Route path="/per/map">
-            <Navigation />
+          <Navigation />
           <Map />
           <Footer />
         </Route>
 
         <Route path="/gr/map">
-            <Navigation />
+          <Navigation />
           <Map />
           <Footer />
         </Route>
 
         <Route path="/tr/map">
-            <Navigation />
+          <Navigation />
           <Map />
 
           <Footer />
@@ -223,50 +247,52 @@ export default function App() {
         </Route>
 
         <Route path={`/en/statics/today`}>
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
+          <DonatePopUp />
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
           <Footer />
         </Route>
 
         <Route path="/per/statics/today">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
           <Footer />
         </Route>
 
         <Route path="/gr/statics/today">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true}/>
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
           <Footer />
         </Route>
 
         <Route path="/tr/statics/today">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
           <Footer />
         </Route>
 
         <Route path="/en/statics/all">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <DonatePopUp />
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
         <Route path="/tr/statics/all">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
         <Route path="/per/statics/all">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
         <Route path="/gr/statics/all">
-            <Navigation />
-          <Statics chartTypes={{"historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8')}} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
+          <Navigation />
+          <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
         </Route>
 
@@ -277,25 +303,25 @@ export default function App() {
         </Route>
 
         <Route path="/en/critical">
-            <Navigation />
+          <Navigation />
           <Critical />
           <Footer />
         </Route>
 
         <Route path="/per/critical">
-            <Navigation />
+          <Navigation />
           <Critical />
           <Footer />
         </Route>
 
         <Route path="/gr/critical">
-            <Navigation />
+          <Navigation />
           <Critical />
           <Footer />
         </Route>
 
         <Route path="/tr/critical">
-            <Navigation />
+          <Navigation />
           <Critical />
           <Footer />
         </Route>
@@ -307,25 +333,25 @@ export default function App() {
         </Route>
 
         <Route path="/en/vaccine">
-            <Navigation />
+          <Navigation />
           <EnVaccine />
           <Footer />
         </Route>
 
         <Route path="/per/vaccine">
-            <Navigation />
+          <Navigation />
           <EnVaccine />
           <Footer />
         </Route>
 
         <Route path="/gr/vaccine">
-            <Navigation />
+          <Navigation />
           <EnVaccine />
           <Footer />
         </Route>
 
         <Route path="/tr/vaccine">
-            <Navigation />
+          <Navigation />
           <EnVaccine />
           <Footer />
         </Route>
