@@ -15,8 +15,6 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Mapbox_logo_2017.svg/1280px-Mapbox_logo_2017.svg.png" width="100px" height='40px' alt='MapBox'>
 
 <img src="https://www.chartjs.org/img/chartjs-logo.svg" width="100px" height='70px' alt='Chart.js'>
-
-<img src="https://pbs.twimg.com/profile_images/1273938647297994753/2mvrQgmu.jpg" width="100px" height='70px' alt='Email.js'>
 </p>
 
 # Covid Media
