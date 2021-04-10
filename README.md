@@ -8,8 +8,6 @@
 
 <img src="https://miro.medium.com/max/464/1*LxtdsVO0UnRDlrale42riQ.png" width="100px" height='70px' alt='Create React App'>
 
-<img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="100px" height='70px' alt='Styled Components'>
-
 <img src="https://pbs.twimg.com/profile_images/1273938647297994753/2mvrQgmu.jpg" width="100px" height='70px' alt='Email.js'>
 
 <img src="https://gblobscdn.gitbook.com/spaces%2F-L9iS6Wm2hynS5H9Gj7j%2Favatar.png" width="100px" height='70px' alt='i18next'>
