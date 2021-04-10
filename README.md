@@ -1,6 +1,7 @@
 <img src="http://covidmediainfo.com/Images/logo_white.png" width="100px" alt='Covid Media'>
 
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png" width="50px" alt='React.js'>
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png" width="100px" alt='React.js'>
+>>>>>>> 3cececaadcfb36e27b31a660737dc0f2f800d278
 
 <img src="https://miro.medium.com/max/5244/1*ZSIihImW6DeVOYwUL-ghfQ.png" width="100px" alt='React Bootstrap'>
 
