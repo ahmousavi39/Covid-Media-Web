@@ -1,5 +1,5 @@
-<p float="left">
-<img src="http://covidmediainfo.com/Images/logo_white.png" width="100px" alt='Covid Media'>
+<p float="center">
+<img src="http://covidmediainfo.com/Images/logo_white.png" width="200px" alt='Covid Media'>
 <br />
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png" width="100px" height='70px' alt='React.js'>
 
