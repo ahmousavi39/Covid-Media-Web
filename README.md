@@ -1,4 +1,7 @@
-![Covid Media Logo](http://covidmediainfo.com/Images/logo_white.png = 50x50)
+<img src="http://covidmediainfo.com/Images/logo_white.png" width="40%">
+
+<!-- ![Covid Media Logo](http://covidmediainfo.com/Images/logo_white.png){:height="50%" width="50%"}  -->
+
 ![React Js](https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png){:height="50%" width="50%"}
 ![React Bootstrap](https://miro.medium.com/max/5244/1*ZSIihImW6DeVOYwUL-ghfQ.png){:height="50%" width="50%"}
 ![Create React App](https://miro.medium.com/max/464/1*LxtdsVO0UnRDlrale42riQ.png){:height="50%" width="50%"}
