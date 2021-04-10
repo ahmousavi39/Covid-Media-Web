@@ -1,5 +1,5 @@
-![Covid Media Logo](http://covidmediainfo.com/Images/logo_white.png) 
-![React Js](https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png) 
+![Covid Media Logo](http://covidmediainfo.com/Images/logo_white.png | width=100) 
+![React Js](https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png | width=100) 
 ![React Bootstrap](http://covidmediainfo.com/Images/logo_white.png) 
 ![Create React App](http://covidmediainfo.com/Images/logo_white.png) 
 ![Styled Components](http://covidmediainfo.com/Images/logo_white.png) 
