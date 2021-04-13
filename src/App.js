@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Map, Navigation, Footer, OnlyMap } from './components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Contact, About, Critical, ContactApp, EnVaccine, Statics, QuickWiki, AllWiki } from "./components/Routing"
+import { Contact, About, Critical, ContactApp, EnVaccine, Statics, QuickWiki, AllWiki, Apps } from "./components/Routing"
 import { useTranslation } from 'react-i18next';
 import ReactGA from "react-ga";
 import Modal from "react-bootstrap/Modal";
@@ -56,10 +56,34 @@ export default function App() {
 
   const { t } = useTranslation();
   initizeAnalytics();
-
   return (
     <Router >
       <Switch>
+
+        {/* Android App Download */}
+        <Route exact path="/en/App">
+          <Navigation />
+          <Apps />
+          <Footer />
+        </Route>
+
+        <Route exact path="/per/App">
+          <Navigation />
+          <Apps />
+          <Footer />
+        </Route>
+
+        <Route exact path="/tr/App">
+          <Navigation />
+          <Apps />
+          <Footer />
+        </Route>
+
+        <Route exact path="/gr/App">
+          <Navigation />
+          <Apps />
+          <Footer />
+        </Route>
 
         {/* Redirect to the statics page */}
         <Route exact path="/en">
