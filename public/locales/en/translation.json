@@ -19,7 +19,7 @@
     },
     "Covid media" : {
         "1" : "Covid Media",
-        "2" : "We are a volunteer group, that trying to help the world and specially refugees during COVID-19 pandemic."
+        "2" : "We are a volunteer group, managed by Amirhossein M. trying to help the world and specially refugees during COVID-19 pandemic."
     },
     "Refugees" : {
         "1" : "Refugees",
@@ -148,14 +148,14 @@
         "1": "About",
         "2": "Who developed this website",
         "3": {
-            "1": "This website have been developed by ",
+            "1": "This website has been developed by ",
             "2": "Amirhossein .",
-            "3": "I'm a middle school student and I'm a refugee on",
-            "4": "Athens,Greece .",
+            "3": "I'm a middle school student and I'm a refugee in",
+            "4": "Budingen, Hessen, Germany",
             "5": "I study Full Stack Web Development at",
             "6": "Social Hackers Academy ."
         },
-        "4": "It is my first react project,this are thing that I used to make this web site :",
+        "4": "It is my first react project, these are language and frameworks that I used to make this web site :",
         "5": {
             "1": "Javascript",
             "2": "React.js",
@@ -164,11 +164,11 @@
             "5": "Bootstrap"
         },
         "6": {
-            "1": "I started learning programing at",
-            "2": "6/2019",
+            "1": "I started learning programing in",
+            "2": "June, 2019",
             "3": "and still learning ...."
         },
-        "7": "Why did I made this website",
+        "7": "Why did I design this website",
         "8": {
             "1": "When I seen that coronavirus started to spread more and more and Scientists started trying to make a vaccine for COVID-19 and they informed world that it can take a super long time, I undrestood that",
             "2": "we need to learn how to live safely by coronavirus .",
@@ -1735,6 +1735,21 @@
         "9": "../../Images/7.png",
         "10": "../../Images/28.png",
         "11": "../../Images/19.png"
+    },
+    "ChartType": {
+        "1": "Global line chart of Cases, Deaths, and Recovered cases of every day from start of COVID-19.",
+        "2": "Bar chart of Cases, Deaths, and Recovered cases.",
+        "3": "Line chart of vaccination statistics, from the beginning of vaccination start.",
+        "4": "Historical",
+        "5": "Historical Vaccine",
+        "6": "Vaccine",
+        "7": "Bar Chart",
+        "8": "Covid History"
+    },
+    "Vaccine": {
+        "1": "Vaccinated",
+        "2": "Congratulations!",
+        "3": "Not Provided Yet!"
     },
     "Translate": {
         "1" : true,

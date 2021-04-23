@@ -3,7 +3,12 @@ import styles from './CountryPicker.module.css';
 import { fetchCountries } from '../../api';
 import Select from 'react-select';
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
+
+
+var coun = window.location.pathname;
+coun.indexOf(1);
+coun.toLowerCase();
+coun = coun.split("/")[4];
 
 const CountryPicker = (props) => {
     const [fetchedCountries, setFetchedCountries] = useState([]);
@@ -11,10 +16,11 @@ const CountryPicker = (props) => {
 
     useEffect(() => {
         const fetchAPI = async () => {
-            setFetchedCountries(await fetchCountries())
+            setFetchedCountries(await fetchCountries());
         }
         fetchAPI();
-    }, [setFetchedCountries]);
+    }, [])
+    
     const searchList =
         fetchedCountries.map(
             (project_name) => {
@@ -33,7 +39,7 @@ const CountryPicker = (props) => {
             <p>{t('Select.1')}</p>
             <Select
                 className={styles.formControl}
-                placeholder="Global"
+                placeholder={coun == undefined ? 'Global' : coun.length < 2 ? 'Global' : coun}
                 defaultValue=""
                 options={newArray}
                 onChange={(e) => props.handleCountryChange(e.value)} /></div>

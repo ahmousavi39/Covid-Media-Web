@@ -2,123 +2,140 @@ import React, { useState, useEffect } from 'react';
 import styles from './Style.module.css';
 import { useTranslation } from 'react-i18next';
 import { Collapse } from 'react-bootstrap';
-import { t } from 'i18next';
 
+var pathname = window.location.pathname;
+pathname = pathname.replace(/^\/[\w\d]+\//, '');
+var first_path = window.location.pathname;
+first_path.indexOf(1);
+first_path.toLowerCase();
+first_path = first_path.split("/")[1];
 
-
-
-
-const Quick = (props) => {
+export const QuickWiki = (props) => {
   const { t } = useTranslation();
 
   return (
-
-    <div className={styles.div}>
-      <br />
-      <h2 >{t('Title.1')}</h2>
-      <iframe className={styles.youtube} src={t('Video.1')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>{t('Title.2')}</p>
-      <br />
-      <br />
-      <h2 >{t('Title.3')}</h2>
-      <iframe className={styles.youtube} src={t('Video.2')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br />
-      <br />
-      <br />
-      <h3 >{t('Title.4')}</h3>
-      <br />
-      <ol style={{ textAlign: 'left' }}>
-        <p className={styles.medium_title}>{t('Symptoms.14')}</p>
-        <ul>
-          <li>{t('Symptoms.1')}</li>
-          <li>{t('Symptoms.2')}</li>
-          <li>{t('Symptoms.3')}</li>
-        </ul>
-        <br />
-        <p className={styles.medium_title}>{t('Symptoms.15')}</p>
-        <ul>
-          <li>{t('Symptoms.4')}</li>
-          <li>{t('Symptoms.5')}</li>
-          <li>{t('Symptoms.6')}</li>
-          <li>{t('Symptoms.7')}</li>
-          <li>{t('Symptoms.8')}</li>
-          <li>{t('Symptoms.9')}</li>
-          <li>{t('Symptoms.10')}</li>
-        </ul>
-        <br />
-        <p className={styles.medium_title}>{t('Symptoms.16')}</p>
-        <ul>
-          <li>{t('Symptoms.11')}</li>
-          <li>{t('Symptoms.12')}</li>
-          <li>{t('Symptoms.13')}</li>
-        </ul>
-        <br />
-
-        <p className={styles.medium_title}>People with mild symptoms who are otherwise healthy should manage their symptoms at home.</p>
-        <br />
-        <p className={styles.medium_title}>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.</p>
-        <br />
-      </ol>
-
-      <br />
-      <br />
-      <br />
-      <h3>{t('Title.5')}</h3>
-      <a href={t('Img.1')}> <img src={t('Img.1')} className={styles.img1} /></a>
-      <br />
-      <br />
-      <br />
-      <br />
-      <h3>{t('Title.6')}</h3>
-      <br />
-      <a href={t('Img.2')}> <img src={t('Img.2')} className={styles.img2} /></a>
-      <br />
-      <br />
-      <br />
-      <br />
-      <h3>{t('Title.7')}</h3>
-      <br />
-      <div className={styles.banner}>
-        <a href={t('Img.3')}> <img src={t('Img.3')} className={styles.img3} /></a>
-        <a href={t('Img.4')}> <img src={t('Img.4')} className={styles.img4} /></a>
+    <>
+      <div style={{ width: '100%', paddingTop: '2%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+          <ul className="nav mb-3" role="tablist" >
+            <li id={pathname === 'wiki/all' ? styles.blue : styles.white}>
+              <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={(e) => window.location.pathname = first_path + '/wiki/all'} role="tab"
+                aria-controls="pills-home" aria-selected="true">{t('Every thing.1')}</a>
+            </li>
+            <li id={pathname === 'wiki/quick' ? styles.blue : styles.white}>
+              <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={(e) => window.location.pathname = first_path + '/wiki/quick'} role="tab"
+                aria-controls="pills-profile" aria-selected="false">{t('Quick.1')}</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <h3>{t('Title.8')}</h3>
-      <br />
-      <a href={t('Img.5')}> <img src={t('Img.5')} className={styles.img5} /></a>
-      <br />
-      <br />
-      <br />
-      <br />
-      <h3>{t('Title.9')}</h3>
-      <br />
-      <a href={t('Img.6')}><img src={t('Img.6')} className={styles.img6} /></a>
-      <br />
-      <br />
-      <br />
-      <br />
-      <h3 style={{ color: 'red' }}>{t('Title.10')}</h3>
-      <br />
-      <a href={t('Img.7')}><img src={t('Img.7')} className={styles.img7} /></a>
-      <br />
-      <br />
-      <br />
-      <br />
-      <h3>{t('Title.11')}</h3>
-      <br />
+      
+      <div className={styles.div}>
+        <br />
+        <h2 >{t('Title.1')}</h2>
+        <iframe title='Youtube Video' className={styles.youtube} src={t('Video.1')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>{t('Title.2')}</p>
+        <br />
+        <br />
+        <h2 >{t('Title.3')}</h2>
+        <iframe title='Youtube Video' className={styles.youtube} src={t('Video.2')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br />
+        <br />
+        <br />
+        <h3 >{t('Title.4')}</h3>
+        <br />
+        <ol style={{ textAlign: 'left' }}>
+          <p className={styles.medium_title}>{t('Symptoms.14')}</p>
+          <ul>
+            <li>{t('Symptoms.1')}</li>
+            <li>{t('Symptoms.2')}</li>
+            <li>{t('Symptoms.3')}</li>
+          </ul>
+          <br />
+          <p className={styles.medium_title}>{t('Symptoms.15')}</p>
+          <ul>
+            <li>{t('Symptoms.4')}</li>
+            <li>{t('Symptoms.5')}</li>
+            <li>{t('Symptoms.6')}</li>
+            <li>{t('Symptoms.7')}</li>
+            <li>{t('Symptoms.8')}</li>
+            <li>{t('Symptoms.9')}</li>
+            <li>{t('Symptoms.10')}</li>
+          </ul>
+          <br />
+          <p className={styles.medium_title}>{t('Symptoms.16')}</p>
+          <ul>
+            <li>{t('Symptoms.11')}</li>
+            <li>{t('Symptoms.12')}</li>
+            <li>{t('Symptoms.13')}</li>
+          </ul>
+          <br />
 
-      <a href={t('Img.8')}> <img src={t('Img.8')} className={styles.img9} /></a>
+          <p className={styles.medium_title}>People with mild symptoms who are otherwise healthy should manage their symptoms at home.</p>
+          <br />
+          <p className={styles.medium_title}>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.</p>
+          <br />
+        </ol>
 
-      <a href={t('Img.9')}><img src={t('Img.9')} className={styles.img8} /></a>
+        <br />
+        <br />
+        <br />
+        <h3>{t('Title.5')}</h3>
+        <a href={t('Img.1')}> <img alt='Covid Media' src={t('Img.1')} className={styles.img1} /></a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>{t('Title.6')}</h3>
+        <br />
+        <a href={t('Img.2')}> <img alt='Covid Media' src={t('Img.2')} className={styles.img2} /></a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>{t('Title.7')}</h3>
+        <br />
+        <div className={styles.banner}>
+          <a href={t('Img.3')}> <img alt='Covid Media' src={t('Img.3')} className={styles.img3} /></a>
+          <a href={t('Img.4')}> <img alt='Covid Media' src={t('Img.4')} className={styles.img4} /></a>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>{t('Title.8')}</h3>
+        <br />
+        <a href={t('Img.5')}> <img alt='Covid Media' src={t('Img.5')} className={styles.img5} /></a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>{t('Title.9')}</h3>
+        <br />
+        <a href={t('Img.6')}><img alt='Covid Media' src={t('Img.6')} className={styles.img6} /></a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3 style={{ color: 'red' }}>{t('Title.10')}</h3>
+        <br />
+        <a href={t('Img.7')}><img alt='Covid Media' src={t('Img.7')} className={styles.img7} /></a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>{t('Title.11')}</h3>
+        <br />
 
-      <a href={t('Img.10')}> <img src={t('Img.10')} className={styles.img8} /></a>
+        <a href={t('Img.8')}> <img alt='Covid Media' src={t('Img.8')} className={styles.img9} /></a>
 
-      <a href={t('Img.11')}><img src={t('Img.11')} className={styles.img8} /></a>
-    </div>
+        <a href={t('Img.9')}><img alt='Covid Media' src={t('Img.9')} className={styles.img8} /></a>
 
+        <a href={t('Img.10')}> <img alt='Covid Media' src={t('Img.10')} className={styles.img8} /></a>
+
+        <a href={t('Img.11')}><img alt='Covid Media' src={t('Img.11')} className={styles.img8} /></a>
+      </div>
+    </>
   )
 }
 
@@ -129,17 +146,17 @@ const WhatIsCovid19 = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState({ whatis: false })
   return (
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">{t('What is covid19.1')}</h2>
-        <a onClick={() => { setOpen({ whatis: !open.whatis }) }} class="btn btn-primary">{!open.whatis ? t('Show more.1') : t('Show less.1')}</a>
+    <div className="card">
+      <div className="card-body">
+        <h2 className="card-title">{t('What is covid19.1')}</h2>
+        <a onClick={() => { setOpen({ whatis: !open.whatis }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.whatis ? t('Show more.1') : t('Show less.1')}</a>
         <Collapse in={open.whatis}>
           <div>
             <br />
             <hr />
             <div>
               <div style={{ textAlign: 'center' }}>
-                <iframe className={styles.youtube} width="560" height="315" src={t('What is covid19.2')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('What is covid19.2')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <br />
               {t('What is covid19.3')}
@@ -168,10 +185,10 @@ const Protect = () => {
   const [open, setOpen] = useState({ protect: false });
   const [open1, setOpen1] = useState({ protect: false, spread: false, mask: false, gloves: false, cleaning: false, distancing: false, handwashing: false });
   return (
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">{t('Prevent getting sick.1')}</h2>
-        <a onClick={() => { setOpen({ protect: !open.protect }) }} class="btn btn-primary">{!open.protect ? t('Show more.1') : t('Show less.1')}</a>
+    <div className="card">
+      <div className="card-body">
+        <h2 className="card-title">{t('Prevent getting sick.1')}</h2>
+        <a onClick={() => { setOpen({ protect: !open.protect }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.protect ? t('Show more.1') : t('Show less.1')}</a>
         <Collapse in={open.protect}>
           <div>
             <br />
@@ -321,7 +338,7 @@ const Protect = () => {
                   <br />
                   <br />
                   <h4>{t('Prevent getting sick.Protect yourself.96')}</h4>
-                  <iframe className={styles.youtube} src={t('Prevent getting sick.Protect yourself.97')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title='Youtube Video' className={styles.youtube} src={t('Prevent getting sick.Protect yourself.97')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <h5>{t('Prevent getting sick.Protect yourself.98')}</h5>
                   <p><a href={t('Prevent getting sick.Protect yourself.99.2')}>{t('Prevent getting sick.Protect yourself.99.1')}</a>{t('Prevent getting sick.Protect yourself.99.3')}</p>
                   <br />
@@ -331,7 +348,7 @@ const Protect = () => {
 
                   <h4>{t('Prevent getting sick.Protect yourself.102')}</h4>
                   <br />
-                  <iframe className={styles.youtube} src={t('Prevent getting sick.Protect yourself.103')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title='Youtube Video' className={styles.youtube} src={t('Prevent getting sick.Protect yourself.103')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <h5><a href={t('Prevent getting sick.Protect yourself.105')}><strong>{t('Prevent getting sick.Protect yourself.104')}</strong></a></h5>
                   <br />
                 </div>
@@ -378,7 +395,7 @@ const Protect = () => {
                       <li>{t('Prevent getting sick.Masks.42')}</li>
                       <li>{t('Prevent getting sick.Masks.43')}</li>
                     </ul>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.44')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.44')} />
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Masks.45')}</li>
                     <br />
@@ -389,7 +406,7 @@ const Protect = () => {
                       <li><strong>{t('Prevent getting sick.Masks.49')}</strong>{t('Prevent getting sick.Masks.50')}</li>
                       <li><strong>{t('Prevent getting sick.Masks.51')}</strong>{t('Prevent getting sick.Masks.52')}</li>
                     </ul>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.53')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.53')} />
                     <br />
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Masks.54')}</li>
@@ -401,7 +418,7 @@ const Protect = () => {
                       <li>{t('Prevent getting sick.Masks.58')}</li>
                     </ul>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.59')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.59')} />
                     <br />
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Masks.60')}</li>
@@ -414,7 +431,7 @@ const Protect = () => {
                       <li>{t('Prevent getting sick.Masks.68')}</li>
                     </ul>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.69')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.69')} />
                     <br />
                   </ol>
                   <br />
@@ -433,7 +450,7 @@ const Protect = () => {
                       <li>{t('Prevent getting sick.Masks.81')}</li>
                     </ul>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.82')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.82')} />
                     <br />
                     <br />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.83')}</p>
@@ -447,7 +464,7 @@ const Protect = () => {
                       <li>{t('Prevent getting sick.Masks.88')}</li>
                       <li>{t('Prevent getting sick.Masks.89')}</li>
                       <br />
-                      <img className={styles.img} src={t('Prevent getting sick.Masks.90')} />
+                      <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.90')} />
                       <br />
                       <br />
                       <p style={{ fontWeight: '550' }}>{t('Prevent getting sick.Masks.91')}</p>
@@ -460,14 +477,14 @@ const Protect = () => {
                       <li>{t('Prevent getting sick.Masks.94')}</li>
                     </ul>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.95')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.95')} />
                     <br />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.96')}</p>
                     <ul>
                       <li>{t('Prevent getting sick.Masks.97')}</li>
                     </ul>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.98')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.98')} />
                     <br />
                     <br />
                   </ol>
@@ -491,7 +508,7 @@ const Protect = () => {
                     <li className={styles.p}>{t('Prevent getting sick.Masks.111.1')}</li>
                     <br />
                     <p className={styles.p} style={{ fontWeight: '700' }}>{t('Prevent getting sick.Masks.111.2')}</p>
-                    <img className={styles.img} height='400px' src={t('Prevent getting sick.Masks.112')} />
+                    <img alt='Covid Media' className={styles.img} height='400px' src={t('Prevent getting sick.Masks.112')} />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.113')}</p>
                     <ul>
                       <li>{t('Prevent getting sick.Masks.114')}</li>
@@ -503,13 +520,13 @@ const Protect = () => {
                     <br />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.119')}</p>
                     <p><strong>{t('Prevent getting sick.Masks.120')}</strong>{t('Prevent getting sick.Masks.121')}</p>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.122')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.122')} />
                     <p><strong>{t('Prevent getting sick.Masks.123')}</strong>{t('Prevent getting sick.Masks.124')}</p>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.125')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.125')} />
                     <p><strong>{t('Prevent getting sick.Masks.126')}</strong>{t('Prevent getting sick.Masks.127')}<br />{t('Prevent getting sick.Masks.128')}</p>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.129')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.129')} />
                     <p><strong>{t('Prevent getting sick.Masks.130')}</strong>{t('Prevent getting sick.Masks.131')}</p>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.132')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.132')} />
                     <br />
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Masks.133')}</li>
@@ -522,17 +539,17 @@ const Protect = () => {
                     </ul>
                     <br />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.138')}</p>
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.139')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.139')} />
 
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.140')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.140')} />
 
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.141')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.141')} />
 
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.142')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.142')} />
 
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.143')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.143')} />
 
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.144')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.144')} />
                     <br />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.145')}</p>
                     <ul>
@@ -547,7 +564,7 @@ const Protect = () => {
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Masks.159')}</li>
                     <br />
-                    <iframe className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Masks.160')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Masks.160')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </ol>
                   <br />
                   <h4>{t('Prevent getting sick.Masks.161')}</h4>
@@ -564,14 +581,14 @@ const Protect = () => {
 
                     <li className={styles.p}>{t('Prevent getting sick.Masks.169')}</li>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Masks.170')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Masks.170')} />
                     <br />
                     <p>{t('Prevent getting sick.Masks.171')}</p>
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Masks.172')}</li>
                     <br />
                     <p style={{ fontWeight: '500' }}>{t('Prevent getting sick.Masks.173')}</p>
-                    <iframe className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Masks.174')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Masks.174')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br />
                     <br />
                     <ul>
@@ -659,7 +676,7 @@ const Protect = () => {
                   <h4>{t('Prevent getting sick.Wearing gloves.15')}</h4>
                   <ol style={{ paddingLeft: '5%' }}>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Wearing gloves.16')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Wearing gloves.16')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Wearing gloves.17')}</p>
@@ -690,7 +707,7 @@ const Protect = () => {
                   <h4>{t('Prevent getting sick.Wearing gloves.38')}</h4>
                   <ol style={{ paddingLeft: '5%' }}>
                     <br />
-                    <iframe className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Wearing gloves.39')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Wearing gloves.39')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br />
                     <ul>
                       <li>{t('Prevent getting sick.Wearing gloves.40')}</li>
@@ -701,7 +718,7 @@ const Protect = () => {
                   <h4>{t('Prevent getting sick.Wearing gloves.42')}</h4>
                   <ol style={{ paddingLeft: '5%' }}>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Wearing gloves.43')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Wearing gloves.43')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Wearing gloves.44')}</p>
@@ -748,7 +765,7 @@ const Protect = () => {
                   <ol style={{ paddingLeft: '5%' }}>
                     <li className={styles.p}>{t('Prevent getting sick.Cleaning your home.12')}</li>
                     <br />
-                    <iframe className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Cleaning your home.13')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Cleaning your home.13')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.14')}</p>
                     <ul>
@@ -784,7 +801,7 @@ const Protect = () => {
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.47')}{t('Prevent getting sick.Cleaning your home.48')}{t('Prevent getting sick.Cleaning your home.50')}</p>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Cleaning your home.51')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Cleaning your home.51')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.52')}</p>
@@ -807,7 +824,7 @@ const Protect = () => {
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Cleaning your home.70')}</li>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Cleaning your home.71')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Cleaning your home.71')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.72')}</p>
@@ -825,7 +842,7 @@ const Protect = () => {
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Cleaning your home.86')}</li>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Cleaning your home.87')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Cleaning your home.87')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.88')}</p>
@@ -851,7 +868,7 @@ const Protect = () => {
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Cleaning your home.109')}</li>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Cleaning your home.110')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Cleaning your home.110')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.111')}</p>
@@ -886,7 +903,7 @@ const Protect = () => {
                   <ol style={{ paddingLeft: '5%' }}>
                     <li className={styles.p}>{t('Prevent getting sick.Cleaning your home.137')}</li>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Cleaning your home.138')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Cleaning your home.138')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Cleaning your home.139')}</p>
@@ -905,7 +922,7 @@ const Protect = () => {
                     <br />
                     <li className={styles.p}>{t('Prevent getting sick.Cleaning your home.159')}</li>
                     <br />
-                    <ul class="false">
+                    <ul className="false">
                       <li><strong>{t('Prevent getting sick.Cleaning your home.160')}</strong>{t('Prevent getting sick.Cleaning your home.161')}</li>
                       <li><strong>{t('Prevent getting sick.Cleaning your home.162')}</strong>{t('Prevent getting sick.Cleaning your home.163')}</li>
                       <li><a href={t('Prevent getting sick.Cleaning your home.165')}>{t('Prevent getting sick.Cleaning your home.164')}</a>{t('Prevent getting sick.Cleaning your home.166')}</li>
@@ -934,7 +951,7 @@ const Protect = () => {
                   <h4>{t('Prevent getting sick.Social distancing.3')}</h4>
                   <div style={{ paddingLeft: '5%' }}>
                     <br />
-                    <iframe className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Social distancing.4')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Social distancing.4')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br />
                     <p>{t('Prevent getting sick.Social distancing.5')}</p>
                     <br />
@@ -986,10 +1003,10 @@ const Protect = () => {
               <Collapse in={open1.handwashing}>
                 <div>
                   <br />
-                  <iframe className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Handwashing.2.1')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('Prevent getting sick.Handwashing.2.1')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <p>{t('Prevent getting sick.Handwashing.2.2')}<a href={t('Prevent getting sick.Handwashing.4')}>{t('Prevent getting sick.Handwashing.3')}</a>{t('Prevent getting sick.Handwashing.5')}</p>
                   <br />
-                  <img className={styles.img} src={t('Prevent getting sick.Handwashing.6')} />
+                  <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Handwashing.6')} />
                   <br />
                   <br />
                   <p><strong>{t('Prevent getting sick.Handwashing.7')}</strong></p>
@@ -1048,14 +1065,14 @@ const Protect = () => {
                     <br />
                     <h2>{t('Prevent getting sick.Handwashing.60.0')}</h2>
                     <br />
-                    <img className={styles.img} src={t('Prevent getting sick.Handwashing.60.1')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Handwashing.60.1')} />
                   </div>
 
                   <br />
                   <h4>{t('Prevent getting sick.Handwashing.60.2')}</h4>
                   <br />
                   <div style={{ paddingLeft: '5%' }}>
-                    <img className={styles.img} src={t('Prevent getting sick.Handwashing.61')} />
+                    <img alt='Covid Media' className={styles.img} src={t('Prevent getting sick.Handwashing.61')} />
                     <br />
                     <br />
                     <p>{t('Prevent getting sick.Handwashing.62')}</p>
@@ -1102,13 +1119,10 @@ const Sick = () => {
   const [open, setOpen] = useState({ sick: false });
   const [open1, setOpen1] = useState({ whattodo: false, isolate: false, quarantine: false, caring: false, parents: false, canbearound: false });
   return (
-    <div class="card">
-      <div class="card-body">
-
-
-
-        <h2 class="card-title">{t('If you are sick.1')}</h2>
-        <a onClick={() => { setOpen({ sick: !open.sick }) }} class="btn btn-primary">{!open.sick ? t('Show more.1') : t('Show less.1')}</a>
+    <div className="card">
+      <div className="card-body">
+        <h2 className="card-title">{t('If you are sick.1')}</h2>
+        <a onClick={() => { setOpen({ sick: !open.sick }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.sick ? t('Show more.1') : t('Show less.1')}</a>
 
         <Collapse in={open.sick}>
           <div>
@@ -1244,7 +1258,7 @@ const Sick = () => {
               <Collapse in={open1.isolate}>
                 <div>
                   <br />
-                  <iframe className={styles.youtube} width="560" height="315" src={t('If you are sick.Isolate.2')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('If you are sick.Isolate.2')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <br />
                   <p><strong>{t('If you are sick.Isolate.3')}</strong>{t('If you are sick.Isolate.4')}</p>
                   <br />
@@ -1338,7 +1352,7 @@ const Sick = () => {
                   <br />
                   <p>{t('If you are sick.Quarantine.5')}</p>
                   <br />
-                  <iframe className={styles.youtube} width="560" height="315" src={t('If you are sick.Quarantine.11')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('If you are sick.Quarantine.11')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <br />
                   <p><strong>{t('If you are sick.Quarantine.12')}</strong>{t('If you are sick.Quarantine.13')}</p>
                   <br />
@@ -1388,7 +1402,7 @@ const Sick = () => {
                     <br />
                     <p>{t('If you are sick.Quarantine.41')}</p>
                     <br />
-                    <img className={styles.img} src={t('If you are sick.Quarantine.42')} />
+                    <img alt='Covid Media' className={styles.img} src={t('If you are sick.Quarantine.42')} />
                   </div>
 
                   <br />
@@ -1402,7 +1416,7 @@ const Sick = () => {
                     <br />
                     <p>{t('If you are sick.Quarantine.46')}</p>
                     <br />
-                    <img className={styles.img} src={t('If you are sick.Quarantine.47')} />
+                    <img alt='Covid Media' className={styles.img} src={t('If you are sick.Quarantine.47')} />
                   </div>
 
                   <br />
@@ -1416,7 +1430,7 @@ const Sick = () => {
                     <br />
                     <p>{t('If you are sick.Quarantine.52')}</p>
                     <br />
-                    <img className={styles.img} src={t('If you are sick.Quarantine.53')} />
+                    <img alt='Covid Media' className={styles.img} src={t('If you are sick.Quarantine.53')} />
                   </div>
 
                   <br />
@@ -1430,7 +1444,7 @@ const Sick = () => {
                     <br />
                     <p>{t('If you are sick.Quarantine.60')}</p>
                     <br />
-                    <img className={styles.img} src={t('If you are sick.Quarantine.61')} />
+                    <img alt='Covid Media' className={styles.img} src={t('If you are sick.Quarantine.61')} />
                   </div>
 
                 </div>
@@ -1452,7 +1466,7 @@ const Sick = () => {
                   <h4>{t('If you are sick.Caring.11')}</h4>
                   <div style={{ paddingLeft: '5%' }}>
                     <br />
-                    <img className={styles.img} src={t('If you are sick.Caring.12')} />
+                    <img alt='Covid Media' className={styles.img} src={t('If you are sick.Caring.12')} />
                     <br />
                     <p>{t('If you are sick.Caring.13')}</p>
                     <br />
@@ -1660,7 +1674,7 @@ const Sick = () => {
                   <h4>{t('If you are sick.When You Can be Around.61')}</h4>
                   <div style={{ paddingLeft: '5%' }}>
                     <br />
-                    <iframe className={styles.youtube} width="560" height="315" src={t('If you are sick.When You Can be Around.62')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('If you are sick.When You Can be Around.62')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <br />
                   <h4>{t('If you are sick.When You Can be Around.63')}</h4>
@@ -1671,7 +1685,7 @@ const Sick = () => {
                   <br />
                   <h4>{t('If you are sick.When You Can be Around.65')}</h4>
                   <div>
-                    <iframe className={styles.youtube} width="560" height="315" src={t('If you are sick.When You Can be Around.66')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title='Youtube Video' className={styles.youtube} width="560" height="315" src={t('If you are sick.When You Can be Around.66')} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <br />
                   <h4>{t('If you are sick.When You Can be Around.67')}</h4>
@@ -1695,79 +1709,79 @@ const Symptoms = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState({ symptoms: false });
   return (
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">{t('Symptomses.1')}</h2>
-        <a onClick={() => { setOpen({ symptoms: !open.symptoms }) }} class="btn btn-primary">{!open.symptoms ? t('Show more.1') : t('Show less.1')}</a>
+    <div className="card">
+      <div className="card-body">
+        <h2 className="card-title">{t('Symptomses.1')}</h2>
+        <a onClick={() => { setOpen({ symptoms: !open.symptoms }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.symptoms ? t('Show more.1') : t('Show less.1')}</a>
 
         <Collapse in={open.symptoms}>
           <div>
             <br />
             <hr />
             <div id='symptoms'>
-            <h4>{t('Symptomses.2')}</h4>
-            <br />
-            <div style={{paddingLeft : '5%'}}>
-              <ul>
-                <li>{t('Symptomses.3')}</li>
-                <li><strong>{t('Symptomses.4')}</strong>{t('Symptomses.5')}</li>
-              </ul>
-            </div>
-            <br />
-            <h4>{t('Symptomses.6')}</h4>
-            <br />
-            <div style={{paddingLeft : '5%'}}>
-              <p>{t('Symptomses.7')}<strong>{t('Symptomses.8')}</strong>{t('Symptomses.9')}</p>
-              <ul>
-                <li>{t('Symptomses.10')}</li>
-                <li>{t('Symptomses.11')}</li>
-                <li>{t('Symptomses.12')}</li>
-                <li>{t('Symptomses.13')}</li>
-                <li>{t('Symptomses.14')}</li>
-                <li>{t('Symptomses.15')}</li>
-                <li>{t('Symptomses.16')}</li>
-                <li>{t('Symptomses.17')}</li>
-                <li>{t('Symptomses.18')}</li>
-                <li>{t('Symptomses.19')}</li>
-                <li>{t('Symptomses.20')}</li>
-              </ul>
+              <h4>{t('Symptomses.2')}</h4>
               <br />
-              <p>{t('Symptomses.21')}</p>
-            </div>
-            <br />
-            <h4>{t('Symptomses.22')}</h4>
-            <br />
-            <div style={{paddingLeft : '5%'}}>
-              <p>{t('Symptomses.23')}<strong>{t('Symptomses.24')}</strong>{t('Symptomses.25')}<strong>{t('Symptomses.26')}</strong></p>
-              <ul>
-                <li>{t('Symptomses.27')}</li>
-                <li>{t('Symptomses.28')}</li>
-                <li>{t('Symptomses.29')}</li>
-                <li>{t('Symptomses.30')}</li>
-                <li>{t('Symptomses.31')}</li>
-              </ul>
+              <div style={{ paddingLeft: '5%' }}>
+                <ul>
+                  <li>{t('Symptomses.3')}</li>
+                  <li><strong>{t('Symptomses.4')}</strong>{t('Symptomses.5')}</li>
+                </ul>
+              </div>
               <br />
-              <p>{t('Symptomses.32')}</p>
+              <h4>{t('Symptomses.6')}</h4>
               <br />
-              <p><strong>{t('Symptomses.33')}</strong>{t('Symptomses.24')}</p>
-            </div>
-            <br />
-            <h4>{t('Symptomses.35')}</h4>
-            <br />
-            <div style={{paddingLeft : '5%'}}>
-              <ul>
-              <li><a href={t('Symptomses.37')}>{t('Symptomses.36')}</a></li>
-              <li><a href={t('Symptomses.39')}>{t('Symptomses.38')}</a></li>
-              <li><a href={t('Symptomses.41')}>{t('Symptomses.40')}</a></li>
-           </ul> 
-           </div>
-            <br />
-            <h4>{t('Symptomses.42')}</h4>
-            <br />
-            <div style={{paddingLeft : '5%'}}>
-              <p>{t('Symptomses.43')}</p>
-              <p>{t('Symptomses.44')}</p>
-            </div>
+              <div style={{ paddingLeft: '5%' }}>
+                <p>{t('Symptomses.7')}<strong>{t('Symptomses.8')}</strong>{t('Symptomses.9')}</p>
+                <ul>
+                  <li>{t('Symptomses.10')}</li>
+                  <li>{t('Symptomses.11')}</li>
+                  <li>{t('Symptomses.12')}</li>
+                  <li>{t('Symptomses.13')}</li>
+                  <li>{t('Symptomses.14')}</li>
+                  <li>{t('Symptomses.15')}</li>
+                  <li>{t('Symptomses.16')}</li>
+                  <li>{t('Symptomses.17')}</li>
+                  <li>{t('Symptomses.18')}</li>
+                  <li>{t('Symptomses.19')}</li>
+                  <li>{t('Symptomses.20')}</li>
+                </ul>
+                <br />
+                <p>{t('Symptomses.21')}</p>
+              </div>
+              <br />
+              <h4>{t('Symptomses.22')}</h4>
+              <br />
+              <div style={{ paddingLeft: '5%' }}>
+                <p>{t('Symptomses.23')}<strong>{t('Symptomses.24')}</strong>{t('Symptomses.25')}<strong>{t('Symptomses.26')}</strong></p>
+                <ul>
+                  <li>{t('Symptomses.27')}</li>
+                  <li>{t('Symptomses.28')}</li>
+                  <li>{t('Symptomses.29')}</li>
+                  <li>{t('Symptomses.30')}</li>
+                  <li>{t('Symptomses.31')}</li>
+                </ul>
+                <br />
+                <p>{t('Symptomses.32')}</p>
+                <br />
+                <p><strong>{t('Symptomses.33')}</strong>{t('Symptomses.24')}</p>
+              </div>
+              <br />
+              <h4>{t('Symptomses.35')}</h4>
+              <br />
+              <div style={{ paddingLeft: '5%' }}>
+                <ul>
+                  <li><a href={t('Symptomses.37')}>{t('Symptomses.36')}</a></li>
+                  <li><a href={t('Symptomses.39')}>{t('Symptomses.38')}</a></li>
+                  <li><a href={t('Symptomses.41')}>{t('Symptomses.40')}</a></li>
+                </ul>
+              </div>
+              <br />
+              <h4>{t('Symptomses.42')}</h4>
+              <br />
+              <div style={{ paddingLeft: '5%' }}>
+                <p>{t('Symptomses.43')}</p>
+                <p>{t('Symptomses.44')}</p>
+              </div>
             </div>
           </div>
         </Collapse>
@@ -1781,22 +1795,22 @@ const Symptoms = () => {
 
 const Testing = () => {
   const { t } = useTranslation();
-  const [open, setOpen] = useState({ testing : false });
-  const [open1, setOpen1] = useState({ testing : false , currentinfection : false , pastinfection : false });
+  const [open, setOpen] = useState({ testing: false });
+  const [open1, setOpen1] = useState({ testing: false, currentinfection: false, pastinfection: false });
 
   return (
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">{t('Testing.1')}</h2>
-        <a onClick={() => { setOpen({ testing: !open.testing }) }} class="btn btn-primary">{!open.testing ? t('Show more.1') : t('Show less.1')}</a>
+    <div className="card">
+      <div className="card-body">
+        <h2 className="card-title">{t('Testing.1')}</h2>
+        <a onClick={() => { setOpen({ testing: !open.testing }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.testing ? t('Show more.1') : t('Show less.1')}</a>
 
         <Collapse in={open.testing}>
           <div>
 
-          <br />
-          <hr />
+            <br />
+            <hr />
 
-          <div id='testing'>
+            <div id='testing'>
               <h4 onClick={() => { setOpen1({ testing: !open1.testing }) }} className={styles.medium_title} >{t('Testing.Testing.1')}<br /><span className={styles.span}>{!open1.testing ? t('Show more.2') : t('Show less.1')}</span></h4>
               <Collapse id='testing1' in={open1.testing}>
                 <div>
@@ -1813,7 +1827,7 @@ const Testing = () => {
                   <br />
                   <h4>{t('Testing.Testing.19')}</h4>
                   <br />
-                  <div style={{paddingLeft : '5%'}}>
+                  <div style={{ paddingLeft: '5%' }}>
                     <ul>
                       <li>{t('Testing.Testing.20')}<a href={t('Testing.Testing.22')}>{t('Testing.Testing.21')}</a>{t('Testing.Testing.23')}</li>
                       <li>{t('Testing.Testing.24')}</li>
@@ -1824,7 +1838,7 @@ const Testing = () => {
                   <br />
                   <h4>{t('Testing.Testing.30')}</h4>
                   <br />
-                  <div style={{paddingLeft : '5%'}}>
+                  <div style={{ paddingLeft: '5%' }}>
                     <ul>
                       <li><strong>{t('Testing.Testing.31')}</strong>{t('Testing.Testing.32')}<a href={t('Testing.Testing.34')}>{t('Testing.Testing.33')}</a>{t('Testing.Testing.35')}</li>
                       <li><strong>{t('Testing.Testing.36')}</strong>{t('Testing.Testing.37')}</li>
@@ -1832,11 +1846,11 @@ const Testing = () => {
                   </div>
                 </div>
               </Collapse>
-          </div> 
+            </div>
 
-          <hr />
+            <hr />
 
-          <div id='currentinfection'>
+            <div id='currentinfection'>
               <h4 onClick={() => { setOpen1({ currentinfection: !open1.currentinfection }) }} className={styles.medium_title} >{t('Testing.Currentinfection.1')}<br /><span className={styles.span}>{!open1.currentinfection ? t('Show more.2') : t('Show less.1')}</span></h4>
               <Collapse in={open1.currentinfection}>
                 <div>
@@ -1847,22 +1861,22 @@ const Testing = () => {
                   <br />
                   <h4>{t('Testing.Currentinfection.7')}</h4>
                   <br />
-                  <div style={{paddingLeft : '5%'}}>
-                  <p>{t('Testing.Currentinfection.8')}</p>
-                  <br />
-                  <p>{t('Testing.Currentinfection.9')}</p>
-                  <ul>
-                    <li>{t('Testing.Currentinfection.10')}</li>
-                    <li>{t('Testing.Currentinfection.11')}</li>
-                    <li>{t('Testing.Currentinfection.12')}</li>
-                    <li>{t('Testing.Currentinfection.13')}<a href={t('Testing.Currentinfection.15')}>{t('Testing.Currentinfection.14')}</a>{t('Testing.Currentinfection.16')}</li>
-                    <li>{t('Testing.Currentinfection.17')}</li>
-                  </ul>
+                  <div style={{ paddingLeft: '5%' }}>
+                    <p>{t('Testing.Currentinfection.8')}</p>
+                    <br />
+                    <p>{t('Testing.Currentinfection.9')}</p>
+                    <ul>
+                      <li>{t('Testing.Currentinfection.10')}</li>
+                      <li>{t('Testing.Currentinfection.11')}</li>
+                      <li>{t('Testing.Currentinfection.12')}</li>
+                      <li>{t('Testing.Currentinfection.13')}<a href={t('Testing.Currentinfection.15')}>{t('Testing.Currentinfection.14')}</a>{t('Testing.Currentinfection.16')}</li>
+                      <li>{t('Testing.Currentinfection.17')}</li>
+                    </ul>
                   </div>
                   <br />
                   <h4>{t('Testing.Currentinfection.18')}</h4>
                   <br />
-                  <div style={{paddingLeft : '5%'}}>
+                  <div style={{ paddingLeft: '5%' }}>
                     <p><a target="_blank" href={t('Testing.Currentinfection.20')}>{t('Testing.Currentinfection.19')}</a>{t('Testing.Currentinfection.21')}</p>
                     <br />
                     <p>{t('Testing.Currentinfection.22')}</p>
@@ -1878,11 +1892,11 @@ const Testing = () => {
                   </div>
                 </div>
               </Collapse>
-          </div>
+            </div>
 
-          <hr />
+            <hr />
 
-          <div id='pastinfection'>
+            <div id='pastinfection'>
               <h4 id='examp' onClick={() => { setOpen1({ pastinfection: !open1.pastinfection }) }} className={styles.medium_title} >{t('Testing.Pastinfection.1')}<br /><span className={styles.span}>{!open1.pastinfection ? t('Show more.2') : t('Show less.1')}</span></h4>
               <Collapse in={open1.pastinfection}>
                 <div>
@@ -1895,7 +1909,7 @@ const Testing = () => {
                   <br />
                   <h4>{t('Testing.Pastinfection.12')}</h4>
                   <br />
-                  <div style={{paddingLeft : '5%'}}>
+                  <div style={{ paddingLeft: '5%' }}>
                     <p><a target="_blank" href={t('Testing.Pastinfection.14')}>{t('Testing.Pastinfection.13')}</a>{t('Testing.Pastinfection.15')}</p>
                     <br />
                     <p>{t('Testing.Pastinfection.16')}</p>
@@ -1904,7 +1918,7 @@ const Testing = () => {
                   </div>
                   <h4>{t('Testing.Pastinfection.18')}</h4>
                   <br />
-                  <ol style={{paddingLeft : '5%'}}>
+                  <ol style={{ paddingLeft: '5%' }}>
                     <li className={styles.p}>{t('Testing.Pastinfection.19')}</li>
                     <br />
                     <ul>
@@ -1932,7 +1946,7 @@ const Testing = () => {
                   </ol>
                 </div>
               </Collapse>
-          </div>
+            </div>
           </div>
         </Collapse>
       </div>
@@ -1942,7 +1956,7 @@ const Testing = () => {
 
 
 
-const All = (props) => {
+export const AllWiki = (props) => {
   const { t } = useTranslation();
   const [translate, setTranslate] = useState();
 
@@ -1951,69 +1965,51 @@ const All = (props) => {
   }, [])
 
   return (
-    <div className={styles.div} style={{ fontFamily: "Arial Black" }}>
-      <ul style={{ paddingLeft: '0', marginLeft: '0' }}>
-
-        <div id='what-is' className={styles.card_padding} style={{paddingTop : '0' , marginTop : '0'}}>
-          <WhatIsCovid19 />
-        </div>
-
-        <div id='symptoms' className={styles.card_padding}>
-          <Symptoms />
-        </div>
-
-        <div id='testing' className={styles.card_padding}>
-          <Testing />
-        </div>
-
-        <div id='prevent-getting-sick' className={styles.card_padding}>
-          <Protect />
-        </div>
-
-
-        <div id='if-you-are-sick' className={styles.card_padding}>
-          <Sick />
-        </div>
-
-
-      </ul>
-    </div>
-
-  )
-}
-
-const Wiki = () => {
-  const { t } = useTranslation();
-  var pathname = window.location.pathname;
-  pathname = pathname.replace(/^\/[\w\d]+\//, '');
-  var first_path = window.location.pathname;
-  first_path.indexOf(1);
-  first_path.toLowerCase();
-  first_path = first_path.split("/")[1];
-  return (
-    <div>
-
+    <>
       <div style={{ width: '100%', paddingTop: '2%' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-          <ul class="nav mb-3" role="tablist" >
-            <li id={pathname == 'wiki' ? styles.blue : styles.white}>
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={(e) => window.location.pathname = first_path + '/wiki'} role="tab"
+          <ul className="nav mb-3" role="tablist" >
+            <li id={pathname === 'wiki/all' ? styles.blue : styles.white}>
+              <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={(e) => window.location.pathname = first_path + '/wiki/all'} role="tab"
                 aria-controls="pills-home" aria-selected="true">{t('Every thing.1')}</a>
             </li>
-            <li id={pathname == 'wiki/quick' ? styles.blue : styles.white}>
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={(e) => window.location.pathname = first_path + '/wiki/quick'} role="tab"
+            <li id={pathname === 'wiki/quick' ? styles.blue : styles.white}>
+              <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={(e) => window.location.pathname = first_path + '/wiki/quick'} role="tab"
                 aria-controls="pills-profile" aria-selected="false">{t('Quick.1')}</a>
             </li>
           </ul>
         </div>
       </div>
-      <h1 style={{paddingBottom : '2%' , textAlign  :'center'}} onClick={() => {
+      <h1 style={{ paddingBottom: '2%', textAlign: 'center' }} onClick={() => {
         window.location.pathname = first_path + '/wiki/quick'
       }}>{t('Translate.2')}<span className={styles.a}><a>{t('Translate.3')}</a></span></h1>
 
-      {pathname == 'wiki/quick' ? <Quick /> : <All />}
-    </div>
+      <div className={styles.div} style={{ fontFamily: "Arial Black" }}>
+        <ul style={{ paddingLeft: '0', marginLeft: '0' }}>
+
+          <div id='what-is' className={styles.card_padding} style={{ paddingTop: '0', marginTop: '0' }}>
+            <WhatIsCovid19 />
+          </div>
+
+          <div id='symptoms' className={styles.card_padding}>
+            <Symptoms />
+          </div>
+
+          <div id='testing' className={styles.card_padding}>
+            <Testing />
+          </div>
+
+          <div id='prevent-getting-sick' className={styles.card_padding}>
+            <Protect />
+          </div>
+
+          <div id='if-you-are-sick' className={styles.card_padding}>
+            <Sick />
+          </div>
+
+        </ul>
+      </div>
+    </>
   )
 }
 
-export default Wiki;
