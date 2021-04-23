@@ -3,15 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 40px 0;
-} 
-
-.historical-chart {
-  margin-right: auto;
-  margin-left: auto;
-  align-items: center;
-  display : flex;
-  text-align: center;
-  position: center;
+  
 }
 
 .card {
@@ -30,10 +22,6 @@
 .deaths{
   border-bottom: 10px solid rgb(255, 3, 3);
 }
-
-.vaccine{
-  border-bottom: 10px solid rgba(146, 144, 144, 0.219);
-}
 .active{
   border-bottom: 10px solid yellow;
 }
@@ -51,7 +39,6 @@
     height: 130px;
   }
   .container{
-    padding-right: 30px;
-    padding-left: 30px;
+    margin: 10px 0;
   }
 }

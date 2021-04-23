@@ -32,7 +32,7 @@ const About = (props) => {
         <p style={{ padding: '5%' }}>{t('Aboutus.3.1')} <strong> {t('Aboutus.3.2')}</strong> <br />
         {t('Aboutus.3.3')} <strong>{t('Aboutus.3.4')}</strong>
         <br />
-        {t('Aboutus.3.5')} <a target="_blank" rel="noopener noreferrer" href="https://socialhackersacademy.org/"><strong style={{ color: 'black' }}> {t('Aboutus.3.6')} </strong></a>
+        {t('Aboutus.3.5')} <a target="_blank" href="https://socialhackersacademy.org/"><strong style={{ color: 'black' }}> {t('Aboutus.3.6')} </strong></a>
 
           <br />
           <br />
