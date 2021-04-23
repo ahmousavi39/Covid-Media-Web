@@ -18,6 +18,7 @@
 </p>
 
 # Covid Media
+version: 4.1.0
 ### Covid Media is a project, tyring to help the world specially refugees during the COVID-19 pandeimc,
 
 ### The web app, Android app, and IOS app is developed with React.
