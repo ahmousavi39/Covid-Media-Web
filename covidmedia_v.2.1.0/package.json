@@ -1,0 +1,57 @@
+{
+  "name": "covidmedia_v.2.1.0",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "chart.js": "^2.9.3",
+    "classnames": "^2.2.6",
+    "country-code-lookup": "0.0.17",
+    "i18next": "^17.0.14",
+    "i18next-browser-languagedetector": "^3.0.3",
+    "i18next-xhr-backend": "^3.1.2",
+    "mapbox-gl": "^1.12.0",
+    "netlify-cli": "^2.53.0",
+    "node-sass": "4.13.1",
+    "react": "16.12.0",
+    "react-bootstrap": "^1.0.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "16.12.0",
+    "react-ga": "^3.0.0",
+    "react-i18next": "^10.12.4",
+    "react-mailto": "^0.4.0",
+    "react-protected-mailto": "^1.0.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-select": "^2.4.4",
+    "styled-components": "^5.1.1",
+    "swr": "0.1.18",
+    "react-html-parser": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

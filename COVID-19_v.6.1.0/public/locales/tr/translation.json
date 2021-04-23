@@ -1,0 +1,148 @@
+{
+    "Amirhossein" : {
+        "1" : "Amir tr "
+    },"rec" : {
+        "1" : "Iyileşmiş"
+    },
+    "dea" : {
+        "1" : "Ölümler"
+    },
+    "con" : {
+        "1" : "Onaylanmış"
+    },
+    "peo" : {
+        "1"  : "Halk"
+    },
+    "Map" :{
+        "1" : "Harita"
+    },
+    "Wiki" : {
+        "1" : "Bilgi"
+    },
+    "About" : {
+        "1" : "Hakkımızda"
+    },
+    "Contact" : {
+        "1" : "Bize Ulaşı"
+    },
+    "Statics" : {
+        "1" : "İstatistik"
+    },
+ "Title" : {
+    "1" : "COVID-19 nedir ?",
+    "2" : "Yeni Koronavirüs Hastalığı (COVID-19), ilk olarak Çin’in Vuhan Eyaleti’nde Aralık ayının sonlarında solunum yolu belirtileri (ateş, öksürük, nefes darlığı) gelişen bir grup hastada yapılan araştırmalar sonucunda 13 Ocak 2020’de tanımlanan bir virüstür Salgın başlangıçta bu bölgedeki deniz ürünleri ve hayvan pazarında bulunanlarda tespit edilmiştir. Daha sonra insandan insana bulaşarak Vuhan başta olmak üzere Hubei eyaletindeki diğer şehirlere ve Çin Halk Cumhuriyeti’nin diğer eyaletlerine ve diğer dünya ülkelerine yayılmıştır. Koronavirüsler, hayvanlarda veya insanlarda hastalığa neden olabilecek büyük bir virüs ailesidir. İnsanlarda, birkaç koronavirüsün soğuk algınlığından Orta Doğu Solunum Sendromu (MERS) ve Şiddetli Akut Solunum Sendromu (SARS) gibi daha şiddetli hastalıklara kadar solunum yolu enfeksiyonlarına neden olduğu bilinmektedir. Yeni Koronavirüs Hastalığına SAR-CoV-2 virüsü neden olur.",
+    "3" : "Neler COVID-19 hakkında bilmeliyiz ?",
+    "4" : "Belirtiler :",
+    "5" : "Koranavirus nasıl yayılır ?",
+    "6" : "Koronavirus İletimini Önleme İpuçları :",
+    "7" : "Bağışıklık sistemi güçlendiricileri :",
+    "8" : "Ellerinizi sabunla yıkayın !!!",
+    "9" : " ",
+    "10" : "EVDE KAL !!!",
+    "11" : "Öneriler:"
+}, 
+"Symptoms" : {
+    "1" : "Ateş veya titreme",
+    "2" : "Öksürük",
+    "3" : "Öksürük Nefes darlığı veya nefes darlığı" ,
+    "4" : "yorgunluk" ,
+    "5" : "Kas veya vücut ağrıları",
+    "7" : "Baş ağrısı",
+    "6" : "Yeni tat veya koku kaybı",
+    "8" : "Tıkanıklık veya burun akıntısı",
+    "9" : "Boğaz ağrısı",
+    "10" : "Mide bulantısı ya da kusma",
+    "11" : "Ishal"
+},
+"Video" : {
+    "1" : "https://www.youtube.com/embed/qa087kSwqU4",
+    "2" : "https://www.youtube.com/embed/ZGt8-AuxBZU"
+},
+"Img" : {
+    "1" : "https://i.ytimg.com/vi/kXEbSfsma68/maxresdefault.jpg",
+    "2" : "https://ichef.bbci.co.uk/news/410/cpsprodpb/7D49/production/_110637023_coronavirus_risk_reduction_640-nc.png",
+    "3" : "https://media.istockphoto.com/illustrations/pregnant-woman-doing-gymnastics-flat-cartoon-style-sports-lessons-at-illustration-id1088507624",
+    "4" : "https://i.sozcu.com.tr/wp-content/uploads/2020/03/21/iecrop/shutterstock_702093349_16_9_1584795701-880x495.jpg" ,
+    "5" : "https://www.mediaclick.com.tr/mp-include/uploads/2020/03/dogru-el-yikama.jpg",
+    "6" : "https://images.theconversation.com/files/320980/original/file-20200317-60894-1l3jara.png?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip",
+    "7" : "https://www.torbali.bel.tr/assets/upload/evd1_8448-1148.jpg",
+    "8" : "https://media.istockphoto.com/vectors/no-smoking-and-drinking-alcohol-set-of-prohibition-sign-vector-vector-id949786806",
+    "9" : "https://www.aestheticsjulieedwards.co.uk/wp-content/uploads/2019/06/vitamin3.jpg",
+    "10" : "https://img.fanatik.com.tr/img/78/740x418/5e74bd0c66a97c5a63d2bd2a.jpg",
+    "11" : "https://lh3.googleusercontent.com/proxy/JTv9awZppk4BHH8a5NetiYzrSTX8HvyXal1q0akK0j4u6Rx0JU0d-b1wcykAM_Wlk_zhjcmDzPr5OExWEbFjZIchMBECn6QCX-pM"
+},
+"Contactus" : {
+    "2" : "Sizden duymak isteriz !",
+    "1" : "Bize Ulaşın :",
+    "3" : "Adınız",
+    "4" : "E-mail adresiniz",
+    "5" : "konu",
+    "6" : "Geri bildirim",
+    "7" : "Seçeneği seç",
+    "8" : "Hata bildirin",
+    "9" : "Özellik isteği",
+    "10" : "Mesajıniz",
+    "11" : "SUNMAK"
+},
+"Aboutus" : {
+    "1" : "Hakkımızda",
+    "2" : "Bu web sitesini kim geliştirdi",
+    "3" : {
+        "1" : "‌Bu web sitesi geliştirilmiştir ile ,",
+        "2" : "Amirhossein .",
+        "3" : "Ben ortaokul öğrencisi ve mülteciyim",
+        "4" : "Atina,Yunanistan'da ",
+        "5" : "Ben Web programlama'ya okuyorum ",
+        "6" : "Socail Hackers Academy'de"
+    },
+    "4" : "Bu benim ilk 'React' projem'dir, bu web sitesini yapmak için kullandığım şeyler :",
+    "5" : {
+        "1" :"Javascript",
+        "2" : "React.js",
+        "3" : "HTML5",
+        "4" : "CSS3",
+        "5" : "Bootstrap"
+    },
+    "6" : {
+        "1" : "Programlamaya öğrenmeye ",
+        "2" : "6/2019",
+        "3" : "başladım, ve hala öğreniyorum ...."
+    },
+    "7" : "Bu web sitesini neden yaptım",
+    "8" : {
+        "1" : "Koronavirüsün gittikçe daha fazla yayılmaya başladığını gördüğümde ve Bilim adamları COVID-19 için bir aşı yapmaya çalıştılar ve dünyaya bunun çok uzun zaman alabileceğini bildirdiler,bunu bildim ki",
+        "2" : "coronavirüs ile güvenli bir şekilde yaşamayı öğrenmemiz gerekiyor .",
+        "3" : "Bu web sitesini yapmanın nedeni budur ."
+    },
+    "9" : "Koronavirüsün yok edilmesine yardımcı olmak herkesin görevi'dir . "
+
+},
+"footbar1" : {
+    "1" : "Tasarlanmış Amirhossein ile",
+    "2" : "Ben ortaokul öğrencisiyim,Ben web programlama'ya Geliştirme okudum ",
+    "3" : "Social Hackers Academy'de",
+    "4" : " okudum ."
+},
+"footbar2" : {
+    "1" : "Sayfalar "
+},
+"footbar3" : {
+ "1" : "İletişim"
+},
+"footbar4" : {
+"1" : "Başvuru"
+},
+"footbar5" : {
+"1" : "ÖZEL TEŞEKKÜR",
+"2" : "Social Hackers Academy ",
+"3" : "AbdalRahman Hamami",
+"4" : "Maria Pashalidou",
+"5" : "Vadim Ovcearenco",
+"6" : "Mohammad Sadegh Mousavi",
+"7" : "Sara Mousavi"
+},
+"Select" : {
+"1" : "Ülke Seçiniz"
+}
+
+    }

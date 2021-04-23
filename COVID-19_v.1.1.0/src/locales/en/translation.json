@@ -1,0 +1,82 @@
+{
+"Amirhossein" : {
+    "1" : "Amir en"
+},
+"rec" : {
+    "1" : "Recovered"
+},
+"dea" : {
+    "1" : "Deaths"
+},
+"con" : {
+    "1" : "Confirmed"
+},
+"Wiki" : {
+    "1" : "Wiki"
+},
+"About" : {
+    "1" : "About us"
+},
+"Contact" : {
+    "1" : "Contact us"
+},
+"Home" : {
+    "1" : "Home"
+},
+"Title" : {
+    "1" : "What is COVID-19?",
+    "2" : "An infectious disease caused by a coronavirus (= a type of virus), that usually causes fever, tiredness, and a cough, and can also cause breathing problems.Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). It was first identified in December 2019 in Wuhan, China, and has since spread globally, resulting in an ongoing pandemic.",
+    "3" : "What we need to know about COVID-19 ?",
+    "4" : "Symptoms :",
+    "5" : "How dose Coronavirus spreads :",
+    "6" : "Tips to prevent Coronavirus Transmission :",
+    "7" : "Immune system boosters :",
+    "8" : "Wash your hands by soap !",
+    "9" : "Who is at high risk of COVID-19 :",
+    "10" : "STAY HOME !!!",
+    "11" : "Recommendations :"
+}, 
+"Symptoms" : {
+    "1" : "Fever or chills",
+    "2" : "Cough",
+    "3" : "Shortness of breath or difficulty breathing" ,
+    "4" : "Fatigue" ,
+    "5" : "Muscle or body aches",
+    "6" : "Headache",
+    "7" : "New loss of taste or smell",
+    "8" : "Congestion or runny nose",
+    "9" : "Sore throat",
+    "10" : "Nausea or vomiting",
+    "11" : "Diarrhea"
+},
+"Video" : {
+    "1" : "https://www.youtube.com/embed/7z0kzYpuqhw",
+    "2" : "https://www.youtube.com/embed/7RFG4o7RKhU"
+},
+"Img" : {
+    "1" : "https://www.world-heart-federation.org/wp-content/uploads/Coronavirus-transmission.jpg",
+    "2" : "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/03/Tips-to-prevent-coronavirus-transmission_ver4-2-scaled.jpg?w=1155&h=5376",
+    "3" : "https://scontent.fath7-1.fna.fbcdn.net/v/t1.0-9/90727816_3010041052374591_2402054129229758464_o.png?_nc_cat=101&_nc_sid=730e14&_nc_eui2=AeEHTq1j_59-js3bK9RZwE2Eg5HlcHjf6XaDkeVweN_pdidB8w5-CBHgEPSZ4IZcy9FqWrlsJb3zMy74kN5jnhIy&_nc_ohc=gToXyikP9fIAX_bNnp5&_nc_ht=scontent.fath7-1.fna&oh=e19234f4279965da73060066e63af037&oe=5EF75577",
+    "4" : "https://scontent.fath7-1.fna.fbcdn.net/v/t1.0-9/94118863_3084968388215190_5663714515003375616_n.jpg?_nc_cat=109&_nc_sid=8bfeb9&_nc_eui2=AeHI8VLXmLQBErAYBYSVxGvl9fbTe_Pvlv319tN78--W_QuWc2J74YFMKgO9rieor2jCTkL75BiYh4iaMB4p6OVn&_nc_ohc=umJ9iXrev1IAX8nAZJ0&_nc_ht=scontent.fath7-1.fna&oh=9bd34d5c8271036abaca1ddc61adc7f5&oe=5EF87B1D" ,
+    "5" : "https://scontent.fath7-1.fna.fbcdn.net/v/t1.0-9/93053457_3060781447300551_449289957534597120_n.jpg?_nc_cat=104&_nc_sid=8bfeb9&_nc_eui2=AeGeB-8iaZve-Hi_8BZmbJSEEkabyNbgr3wSRpvI1uCvfKe1wq-RvvG2slVjkQAqqRKPGeixwOMgorr0uPgwfgJM&_nc_ohc=SpLj1cqVmmIAX_t4DHY&_nc_ht=scontent.fath7-1.fna&oh=457b1a69207ed23aa029d5c01cba546e&oe=5EF84E8C",
+    "6" : "https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbuster-2.tmb-768v.png?sfvrsn=635d24e5_15",
+    "7" : "https://pbs.twimg.com/media/EUcyd6dWsAETctQ.png",
+    "8" : "https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(79).tmb-1920v.png?sfvrsn=86f79761_1",
+    "9" : "https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/7.tmb-1024v.png?sfvrsn=1aab7c90_2",
+    "10" : "https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/28.tmb-1024v.png?sfvrsn=a0bb5119_2",
+    "11" : "https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/19.tmb-1024v.png?sfvrsn=52adfc93_15"
+},
+"Contactus" : {
+    "1" : "Contact us :",
+    "2" : "We would love to hear from you !",
+    "3" : "Your name",
+    "4" : "Your E-mail",
+    "5" : "Subject",
+    "7" : "Feedback",
+    "6" : "Choose optioin",
+    "8" : "Report a bug",
+    "9" : "Feature request",
+    "10" : "Message",
+    "11" : "SUBMIT"
+}
+}

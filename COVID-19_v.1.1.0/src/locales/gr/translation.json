@@ -1,0 +1,82 @@
+{
+    "Amirhossein" : {
+        "1" : "Amir gr"
+    },"rec" : {
+        "1" : "Ανάρρωσαν"
+    },
+    "dea" : {
+        "1" : "Θάνατοι"
+    },
+    "con" : {
+        "1" : "Επιβεβαιωμένα"
+    },
+    "Wiki" : {
+        "1" : "Γνώση"
+    },
+    "About" : {
+        "1" : "Σχετικά με εμάς"
+    },
+    "Contact" : {
+        "1" : "Επικοινωνία"
+    },
+    "Home" : {
+        "1" : "Στατιστική"
+    },
+    "Title" : {
+        "1" : "Τι είναι το COVID-19 ;",
+        "2" : "An infectious disease caused by a coronavirus (= a type of virus), that usually causes fever, tiredness, and a cough, and can also cause breathing problems.Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). It was first identified in December 2019 in Wuhan, China, and has since spread globally, resulting in an ongoing pandemic.",
+        "3" : "Τι πρέπει να γνωρίζουμε για το COVID-19 ;",
+        "4" : "Συμπτώματα :",
+        "5" : "Πώς εξαπλώνεται το COVID-19 :",
+        "6" : "Συμβουλές για την πρόληψη της μετάδοσης COVID-19 :",
+        "7" : "Ενισχυτές του ανοσοποιητικού συστήματος :",
+        "8" : "Πλύνετε τα χέρια σας χρησιμοποιώντας σαπούνι !!!",
+        "9" : "Ποιος διατρέχει υψηλό κίνδυνο COVID-19 :",
+        "10" : "ΜΕΙΝΕ ΣΠΙΤΙ !!!",
+        "11" : "Συστάσεις :"
+    }, 
+    "Symptoms" : {
+        "1" : "Πυρετός ή ρίγη ",
+        "2" : "Βήχας",
+        "3" : "Δύσπνοια ή δυσκολία στην αναπνοή" ,
+        "4" : "Κούραση" ,
+        "5" : "Πόνοι στους μυς ή στο σώμα",
+        "6" : "Πονοκέφαλο",
+        "7" : "Νέα απώλεια γεύσης ή μυρωδιάς",
+        "8" : "Συμφόρηση ή καταρροή",
+        "9" : "Πονόλαιμος",
+        "10" : "Ναυτία ή έμετος",
+        "11" : "Διάρροια"
+    },
+    "Video" : {
+        "1" : "https://www.youtube.com/embed/ngax2Dpaajo",
+        "2" : "https://www.youtube.com/embed/3QeHNLMmRE8"
+    },
+    "Img" : {
+        "1" : "https://www.world-heart-federation.org/wp-content/uploads/Coronavirus-transmission.jpg",
+        "2" : "https://helpa-prometheus.gr/wp-content/uploads/2020/03/koronaios_story.png",
+        "3" : "https://naturalsoul.gr/wp-content/uploads/2020/04/votana-trofes-gia-anosopiitiko.jpg",
+        "4" : "https://www.clubsports.com/sites/default/files/RCSAV-ClubSport-At-Home-Slider.jpg" ,
+        "5" : "https://like.philenews.com/wp-content/uploads/2020/03/hand.jpg",
+        "6" : "https://www.healthyliving.gr/wp-content/uploads/2020/03/death-rate-coronavirus-506x306.jpg",
+        "7" : "https://e-ptolemeos.gr/wp-content/uploads/2020/04/meineSpiti.jpg",
+        "8" : "https://media.istockphoto.com/vectors/no-smoking-and-drinking-alcohol-set-of-prohibition-sign-vector-vector-id949786806",
+        "9" : "https://www.neoldu.com/d/other/ruyada-sarimsak-gormek-001.jpg",
+        "10" : "https://pbs.twimg.com/media/ESwEzndXkAAyqQ5.jpg",
+        "11" : "https://lh3.googleusercontent.com/proxy/Kg_rj9r5K21QGPbNIFkdLnSYSCUw1SPIyMvvshv1WPxgHntX30JAoBHMn1CWznFEPAAoZjqiHr2xQUPqePATT3hLnB-GULfL2U5HYQPfPo2_JWGl1G4NLv6zGbHR0w"
+    },
+    "Contactus" : {
+        "1" : "Επικοινωνήστε μαζί μας :",
+        "2" : "Θα θέλαμε πολύ να ακούσουμε από εσάς !",
+        "3" : "Ονομα σας ",
+        "4" : "Ε-mail σας ",
+        "5" : "Θέμα ",
+        "7" : "Ανατροφοδότηση ",
+        "6" : "Ορίστε μια επιλογή ",
+        "8" : "Αναφέρω ένα πρόβλημα ",
+        "9" : "Αίτημα λειτουργίας ",
+        "10" : "Μήνυμα",
+        "11" : "ΥΠΟΒΑΛΛΟΥΝ "
+    }
+
+}

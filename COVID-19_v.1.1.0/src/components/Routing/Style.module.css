@@ -1,0 +1,108 @@
+.div {
+    margin-top : 1%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+.youtube {
+    width : 50%;
+    height : 350px ;
+    padding-bottom: 2%;
+    padding-top: 2%;
+
+}
+
+.img1 {
+    width : 60%;
+    height : 370px ;
+}
+.img2 {
+    width: 45%;
+    height: 800px;
+}
+.img3 {
+    width: 36%;
+}
+.img4{
+    width: 36%;
+
+}
+.img5 {
+    width : 35%;
+    
+}
+.img6{
+    width:60% ;
+}
+.img7 {
+    width : 35%;
+    height: 500px;
+}
+.img8{
+    width: 60%;
+    padding-bottom: 1%;
+}
+.img9{
+    width: 60%;
+    margin-bottom: 1%;
+
+}
+
+  
+@media(max-width : 770px){
+.youtube {
+    width : 100%;
+    height : 270px ;
+}
+.div {
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top : 4%;
+}
+.img1{
+    width : 100%;
+    height : 270px ;
+}
+.img2 {
+    width : 100%;
+    height : 600px ;
+}
+.img3 {
+   width: 95%;
+    height: 264px;
+    padding-bottom: 2%;
+}
+.img4 {
+    width: 95%;
+    height: 264px;
+ }
+.img5 {
+    width : 99%;
+    height: 255px
+}
+.img6 {
+    width: 100%;
+    height: 255px;
+}
+.img7 {
+    width: 99%;
+}
+.img8{
+    width: 100%;
+    height: 255px;
+}
+.img9{
+    width: 100%;
+    height: 255px;
+} 
+.banner{
+ 
+justify-content:none;
+}
+.div{
+    text-align: center;
+    margin-top : 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+}

@@ -1,0 +1,59 @@
+{
+  "name": "covid-19",
+  "version": "0.1.0",
+  "author": "Amirhossein",
+  "homepage": "https://mousaviamirhossein.github.io/COVID-19",
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "react-scripts": "3.4.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "chart.js": "^2.9.3",
+    "classnames": "^2.2.6",
+    "i18next": "^17.0.14",
+    "i18next-browser-languagedetector": "^3.0.3",
+    "i18next-xhr-backend": "^3.1.2",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.9.0",
+    "react-i18next": "^10.12.4",
+    "react-mailto": "^0.4.0",
+    "react-protected-mailto": "^1.0.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.1.1",
+    "react-select": "^2.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
