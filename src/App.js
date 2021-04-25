@@ -271,7 +271,7 @@ export default function App() {
         </Route>
 
         <Route path={`/en/statics/today`}>
-          <DonatePopUp />
+          {/* <DonatePopUp /> */}
           <Navigation />
           <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={true} />
           <Footer />
@@ -296,7 +296,7 @@ export default function App() {
         </Route>
 
         <Route path="/en/statics/all">
-          <DonatePopUp />
+          {/* <DonatePopUp /> */}
           <Navigation />
           <Statics chartTypes={{ "historical": t('ChartType.4'), "historicalVaccine": t('ChartType.5'), "vaccine": t('ChartType.6'), "barChart": t('ChartType.7'), "covidHistory": t('ChartType.8') }} total={t('Total.1')} today={t('Today.1')} isDaily={false} />
           <Footer />
