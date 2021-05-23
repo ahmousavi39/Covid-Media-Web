@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Navigation.module.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import Donate from '../Donate/Donate';
-import {logoWhite} from '../../Images';
 
 export default function Navigation() {
 
@@ -36,10 +35,12 @@ export default function Navigation() {
 
   }
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className='container'>
       <div className={styles.container}>
-        <img id="top" className={styles.image} src={logoWhite} />
+        <img id="top" className={styles.image} src='/Images/logo_white.png' />
       </div>
       <br />
       <Navbar bg='dark' expand="lg" className={styles.topnav} >
@@ -86,11 +87,10 @@ export default function Navigation() {
             </div>
 
             <div style={{ position: "right" }} className={styles.lann}>
-
-              <Donate />
-
+              <Donate handleShow={isOpen} />
             </div>
 
+            <button onClick={() => {setIsOpen(true)}}>Open</button>
 
             <div style={{ position: "right" }} className={styles.lan}>
               <select value={first_path} onChange={onLangChange} className="d-inline p-2 bg-dark text-white" >

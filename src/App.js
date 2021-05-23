@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Map, Navigation, Footer, OnlyMap } from './components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Contact, About, Critical, ContactApp, EnVaccine, Statics, QuickWiki, AllWiki, Apps } from "./components/Routing"
+import { Contact, About, Critical, ContactApp, Statics, QuickWiki, AllWiki, Apps } from "./components/Routing"
 import { useTranslation } from 'react-i18next';
 import ReactGA from "react-ga";
 import Modal from "react-bootstrap/Modal";
@@ -349,36 +349,7 @@ export default function App() {
           <Critical />
           <Footer />
         </Route>
-
-
-        {/* Vaccine page */}
-        <Route path="/vaccine">
-          <Change1 />
-        </Route>
-
-        <Route path="/en/vaccine">
-          <Navigation />
-          <EnVaccine />
-          <Footer />
-        </Route>
-
-        <Route path="/per/vaccine">
-          <Navigation />
-          <EnVaccine />
-          <Footer />
-        </Route>
-
-        <Route path="/gr/vaccine">
-          <Navigation />
-          <EnVaccine />
-          <Footer />
-        </Route>
-
-        <Route path="/tr/vaccine">
-          <Navigation />
-          <EnVaccine />
-          <Footer />
-        </Route>
+        
 
         <Route exact path="/">
           <Change />

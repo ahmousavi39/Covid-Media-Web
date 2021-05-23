@@ -292,7 +292,7 @@ export function VaccineCountries(props) {
 
   return (
     props.vaccineDataCountries.statics ? (
-      <div style={{width : '1140px'}}>
+      <div className={styles.container}>
       <HorizontalBar height={containerProps.height} width={containerProps.width} data={data} options={options} />
       </div>
     ) : ((<div className="spinner-border" style={{ marginRight: 'auto', marginLeft: 'auto' }} role="status">

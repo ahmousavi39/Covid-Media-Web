@@ -5,7 +5,7 @@ import styles from './Donate.module.css'
 import { useTranslation } from 'react-i18next';
 
 
-export default function Donate() {
+export default function Donate(props) {
   const { t } = useTranslation();
   const Styles = Styled.div`
 .btn{
@@ -18,7 +18,10 @@ export default function Donate() {
 `
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+
+  if(props.handleShow){
+    setShow(true);
+  }
 
   return (
     <Styles>
