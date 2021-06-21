@@ -5,16 +5,16 @@ const urlHisory = 'https://disease.sh/v3/covid-19/historical'
 const urlVacine = 'https://disease.sh/v3/covid-19/vaccine/coverage';
 
 
-const fetchPopulatoin = async () => {
-    let populationData = [];
-    try {
-        const { data } = await axios.get(`${url}/countries`)
-        data.map(value => { populationData.push({ "population": value.population, "country": value.country }) });
-        return populationData;
-    } catch (error) {
-        console.log(error);
-    }
-}
+// const fetchPopulatoin = async () => {
+//     let populationData = [];
+//     try {
+//         const { data } = await axios.get(`${url}/countries`)
+//         data.map(value => { populationData.push({ "population": value.population, "country": value.country }) });
+//         return populationData;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 
 export const fetchData = async (country) => {
@@ -196,51 +196,51 @@ export const fetchHistoricalData = async (country) => {
 
 
 
-export const fetchVaccineCountries = async () => {
-    let Url = `${urlVacine}/countries?lastdays=1`;
+// export const fetchVaccineCountries = async () => {
+//     let Url = `${urlVacine}/countries?lastdays=1`;
 
 
-    try {
-        const data = await axios.get(Url);
-        let useableData = data.data;
-        let fetchedPopulationUseable = await fetchPopulatoin();
+//     try {
+//         const data = await axios.get(Url);
+//         let useableData = data.data;
+//         let fetchedPopulationUseable = await fetchPopulatoin();
 
-        let countries = [];
-        let statics = [];
-        let population = [];
-        let percent = [];
+//         let countries = [];
+//         let statics = [];
+//         let population = [];
+//         let percent = [];
 
-        //Sorting coutries, more to less vaccinaltions
-        let currentDate = Object.keys(useableData[0].timeline);
-        let finalData = useableData.sort((a, b) => parseFloat(b.timeline[currentDate]) - parseFloat(a.timeline[currentDate]));
+//         //Sorting coutries, more to less vaccinaltions
+//         let currentDate = Object.keys(useableData[0].timeline);
+//         let finalData = useableData.sort((a, b) => parseFloat(b.timeline[currentDate]) - parseFloat(a.timeline[currentDate]));
 
-        if ((await fetchedPopulationUseable).length > 100) {
+//         if ((await fetchedPopulationUseable).length > 100) {
 
-            finalData.map((value) => {
-                let popu = [];
-                let vaccines = [];
-                fetchedPopulationUseable.map(popuValue => {
-                    if (value.country == popuValue.country) {
-                        popu = popuValue.population;
-                        population.push(popuValue.population)
-                    }
-                });
-                countries.push(value.country);
-                for (const [key, returnValue] of Object.entries(value.timeline)) {
-                    vaccines = returnValue;
-                    statics.push(returnValue);
-                };
-                percent.push(Math.round(vaccines / popu * 100))
-            });
+//             finalData.map((value) => {
+//                 let popu = [];
+//                 let vaccines = [];
+//                 fetchedPopulationUseable.map(popuValue => {
+//                     if (value.country == popuValue.country) {
+//                         popu = popuValue.population;
+//                         population.push(popuValue.population)
+//                     }
+//                 });
+//                 countries.push(value.country);
+//                 for (const [key, returnValue] of Object.entries(value.timeline)) {
+//                     vaccines = returnValue;
+//                     statics.push(returnValue);
+//                 };
+//                 percent.push(Math.round(vaccines / popu * 100))
+//             });
 
-        }
+//         }
 
-        return { countries, statics, population, percent };
+//         return { countries, statics, population, percent };
 
-    } catch (error) {
-        return error;
-    }
-};
+//     } catch (error) {
+//         return error;
+//     }
+// };
 
 
 export const fetchVacineData = async (country) => {

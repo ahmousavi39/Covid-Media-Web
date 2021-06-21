@@ -226,80 +226,80 @@ export function Chart(
 }
 
 
-export function VaccineCountries(props) {
-  let statics = props.vaccineDataCountries.statics;
-  let countries = props.vaccineDataCountries.countries;
-  let population = props.vaccineDataCountries.population;
-  let percent = props.vaccineDataCountries.percent;
+// export function VaccineCountries(props) {
+//   let statics = props.vaccineDataCountries.statics;
+//   let countries = props.vaccineDataCountries.countries;
+//   let population = props.vaccineDataCountries.population;
+//   let percent = props.vaccineDataCountries.percent;
 
-  if (population !== undefined) {
-    population.length = 30;
-    countries.length = 30;
-    statics.length = 30;
-    percent.length = 30;
-  }
-  const data = {
-    labels: countries,
-    datasets: [
-      {
-        label: 'Vaccined',
-        data: statics,
-        backgroundColor: 'green',
-        borderColor: 'green',
-        borderWidth: 1,
-      },
-      {
-        label: 'Population',
-        data: population,
-        backgroundColor: 'red',
-        borderColor: 'red',
-        borderWidth: 1,
-      },
-      {
-        label: 'Vaccined %',
-        data: percent,
-        backgroundColor: 'blue',
-        borderColor: 'blue',
-        borderWidth: 1,
-      }
-    ],
-  };
+//   if (population !== undefined) {
+//     population.length = 30;
+//     countries.length = 30;
+//     statics.length = 30;
+//     percent.length = 30;
+//   }
+//   const data = {
+//     labels: countries,
+//     datasets: [
+//       {
+//         label: 'Vaccined',
+//         data: statics,
+//         backgroundColor: 'green',
+//         borderColor: 'green',
+//         borderWidth: 1,
+//       },
+//       {
+//         label: 'Population',
+//         data: population,
+//         backgroundColor: 'red',
+//         borderColor: 'red',
+//         borderWidth: 1,
+//       },
+//       {
+//         label: 'Vaccined %',
+//         data: percent,
+//         backgroundColor: 'blue',
+//         borderColor: 'blue',
+//         borderWidth: 1,
+//       }
+//     ],
+//   };
 
 
-  const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  };
-  let containerProps;
-  if (window.innerWidth < 450) {
-    containerProps = {
-      width: "100%",
-      height: "300px"
-    };
-  } else {
-    containerProps = {
-      width: "100%",
-      height: "150px"
-    };
-  }
+//   const options = {
+//     scales: {
+//       yAxes: [
+//         {
+//           ticks: {
+//             beginAtZero: true,
+//           },
+//         },
+//       ],
+//     },
+//   };
+//   let containerProps;
+//   if (window.innerWidth < 450) {
+//     containerProps = {
+//       width: "100%",
+//       height: "300px"
+//     };
+//   } else {
+//     containerProps = {
+//       width: "100%",
+//       height: "150px"
+//     };
+//   }
 
-  return (
-    props.vaccineDataCountries.statics ? (
-      <div className={styles.container}>
-      <HorizontalBar height={containerProps.height} width={containerProps.width} data={data} options={options} />
-      </div>
-    ) : ((<div className="spinner-border" style={{ marginRight: 'auto', marginLeft: 'auto' }} role="status">
-      <b><span className="sr-only"></span></b>
-    </div>))
-  )
-}
+//   return (
+//     props.vaccineDataCountries.statics ? (
+//       <div className={styles.container}>
+//       <HorizontalBar height={containerProps.height} width={containerProps.width} data={data} options={options} />
+//       </div>
+//     ) : ((<div className="spinner-border" style={{ marginRight: 'auto', marginLeft: 'auto' }} role="status">
+//       <b><span className="sr-only"></span></b>
+//     </div>))
+//   )
+// }
 
 
 export function RaceChart() {

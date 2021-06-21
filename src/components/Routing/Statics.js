@@ -1,4 +1,6 @@
-import { fetchData, fetchHistoricalData, fetchVacineData, fetchVaccineCountries } from '../../api';
+import { fetchData, fetchHistoricalData, fetchVacineData 
+  //, fetchVaccineCountries
+ } from '../../api';
 import { Cards, CountryPicker, HistoricalData, Chart, HistoricalVaccine, VaccineCountries, RaceChart } from '../../components';
 import React from 'react';
 import styles from './Style.module.css';
@@ -29,7 +31,7 @@ export class Statics extends React.Component {
     historicalDataState: [],
     vaccineData: {},
     historicalDataVaccine: [],
-    vaccineDataCountries: {},
+    // vaccineDataCountries: {},
     country: coun == undefined ? '' : coun,
     isDaily: this.props.isDaily,
     openChart: 'Historical'
@@ -39,8 +41,10 @@ export class Statics extends React.Component {
     const fetchedData = await fetchData(this.state.country);
     const fetchedHistoricalData = await fetchHistoricalData(this.state.country);
     const fetchedVacineData = await fetchVacineData(this.state.country);
-    const fetchedVaccineCountries = await fetchVaccineCountries(this.state.country);
-    this.setState({ data: fetchedData, historicalDataState: fetchedHistoricalData, vaccineData: fetchedVacineData, historicalDataVaccine: fetchedVacineData.allDaysCases, vaccineDataCountries: fetchedVaccineCountries });
+    // const fetchedVaccineCountries = await fetchVaccineCountries(this.state.country);
+    this.setState({ data: fetchedData, historicalDataState: fetchedHistoricalData, vaccineData: fetchedVacineData, historicalDataVaccine: fetchedVacineData.allDaysCases
+      // , vaccineDataCountries: fetchedVaccineCountries 
+    });
   }
 
 
@@ -48,29 +52,31 @@ export class Statics extends React.Component {
     window.location.pathname = lan + '/statics/' + isDaily + '/' + country;
   }
 
-  
+
 
   renderSwitch() {
-    const { data, country, historicalDataVaccine, historicalDataState, vaccineDataCountries } = this.state;
-    switch(this.state.openChart) {
+    const { data, country, historicalDataVaccine, historicalDataState
+      // , vaccineDataCountries 
+    } = this.state;
+    switch (this.state.openChart) {
       case 'Historical':
-          return <HistoricalData data={historicalDataState} />
+        return <HistoricalData data={historicalDataState} />
         break;
       case 'Vaccine Historical':
-          return <HistoricalVaccine vaccineData={historicalDataVaccine} />
+        return <HistoricalVaccine vaccineData={historicalDataVaccine} />
         break;
-      case 'Vaccine':
-          return <VaccineCountries vaccineDataCountries={vaccineDataCountries} />
-        break;
+      // case 'Vaccine':
+      //     return <VaccineCountries vaccineDataCountries={vaccineDataCountries} />
+      //   break;
       case 'Bar Chart':
-          return <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} />
+        return <Chart isDaily={this.state.isDaily} data={data} country={country} vaccineData={this.state.vaccineData} />
         break;
       case 'Covid History':
-          return <RaceChart data={historicalDataState} />
+        return <RaceChart data={historicalDataState} />
         break;
       default:
-          return <p></p>
-    } 
+        return <p></p>
+    }
   }
 
   render() {
@@ -103,38 +109,38 @@ export class Statics extends React.Component {
 
           <div style={{ width: '100%', paddingTop: '2%', paddingBottom: '3%' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-              <ul className="nav mb-3" role="tablist" style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <ul className="nav mb-3" role="tablist" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 
                 <li id={this.state.openChart === 'Historical' ? styles.blue : styles.white}>
-                <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Historical' })} role="tab"
-                  aria-controls="pills-home" aria-selected="true">{this.props.chartTypes.historical}</a>
-              </li>
+                  <a className="nav-link active" id="pills-home-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Historical' })} role="tab"
+                    aria-controls="pills-home" aria-selected="true">{this.props.chartTypes.historical}</a>
+                </li>
 
-              <li id={this.state.openChart === 'Vaccine Historical' ? styles.blue : styles.white}>
-                <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Vaccine Historical' })} role="tab"
-                  aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.historicalVaccine}</a>
-              </li>
-
+                <li id={this.state.openChart === 'Vaccine Historical' ? styles.blue : styles.white}>
+                  <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Vaccine Historical' })} role="tab"
+                    aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.historicalVaccine}</a>
+                </li>
+                {/* 
               <li id={this.state.openChart === 'Vaccine' ? styles.blue : styles.white}>
                 <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Vaccine' })} role="tab"
                   aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.vaccine}</a>
-              </li>
-              <div className={styles.mobileButtons}>
-                <li id={this.state.openChart === 'Bar Chart' ? styles.blue : styles.white}>
-                  <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Bar Chart' })} role="tab"
-                    aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.barChart}</a>
-                </li>
+              </li> */}
+                <div className={styles.mobileButtons}>
+                  <li id={this.state.openChart === 'Bar Chart' ? styles.blue : styles.white}>
+                    <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({ openChart: 'Bar Chart' })} role="tab"
+                      aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.barChart}</a>
+                  </li>
 
-                {/* <li id={this.state.openChart === 'Covid History' ? styles.blue : styles.white}>
+                  {/* <li id={this.state.openChart === 'Covid History' ? styles.blue : styles.white}>
                   <a className="nav-link" id="pills-profile-tab" data-toggle="pill" onClick={() => this.setState({openChart : 'Covid History'})} role="tab"
                     aria-controls="pills-profile" aria-selected="false">{this.props.chartTypes.covidHistory}</a>
                 </li> */}
-              </div>
+                </div>
               </ul>
+            </div>
           </div>
-        </div>
 
-        {this.renderSwitch()}
+          {this.renderSwitch()}
 
         </div >
       )
