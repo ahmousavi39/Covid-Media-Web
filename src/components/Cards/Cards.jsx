@@ -9,8 +9,8 @@ const Cards = (props) => {
     const { t } = useTranslation();
 
     if (!JSON.stringify(props.data.cases)) {
-        return <b><div class="spinner-border" role="status">
-            <span class="sr-only"></span>
+        return <b><div className="spinner-border" role="status">
+            <span className="sr-only"></span>
         </div></b>
     }
 
@@ -20,29 +20,29 @@ const Cards = (props) => {
     return (
         <div className={styles.container}>
 
-            <Grid container spacing={3} style={{marginBottom: 15}} justify="center">
+            <Grid container spacing={3} style={{marginBottom: 15}} justifyContent="center">
                 <Grid item component={Card} xc={12} md={3} className={cx(styles.card, styles.vaccine)}>
                     <CardContent className={styles.cardphone} style={{ paddingLeft: '0%', paddingRight: '1', paddingTop: '2px', paddingBottom: '9px' }}>
                         <Typography color="textSecondary" gutterBottom>{t('Vaccine.1')}</Typography>
                         <Typography variant="h5"><CountUp start={0} end={
                             isDaily ?
-                                vaccineData.todayCases.cases.toString()
+                                vaccineData.todayCases.cases
                                 :
-                                vaccineData.allCases.cases.toString()
+                                vaccineData.allCases.cases
                         } duration={2.5} separator="," /></Typography>
                         <Typography color="textSecondary">{vaccineData.todayCases.cases !== 0 && isDaily ? 'Congratulations!' : vaccineData.allCases.cases !== 0 && !isDaily ? t('Vaccine.2') : t('Vaccine.3')}</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
 
-            <Grid container spacing={3} justify="center">
+            <Grid container spacing={3} justifyContent="center">
                 <Grid item component={Card} xc={12} md={3} className={cx(styles.card, styles.infected)} >
                     <CardContent className={styles.cardphone} style={{ paddingLeft: '0%', paddingRight: '1', paddingTop: '2px', paddingBottom: '9px' }}>
                         <Typography color="textSecondary" gutterBottom >{t('con.1')}</Typography>
                         <Typography variant="h5"  ><CountUp start={0} end={
-                            isDaily ? (props.data.todayCases).toString()
+                            isDaily ? (props.data.todayCases)
                                 :
-                                (props.data.cases).toString()
+                                (props.data.cases)
                         }
                             duration={2.5} separator="," /></Typography>
                         <Typography color="textSecondary" >{new Date(props.data.updated).toDateString()}</Typography>
@@ -53,9 +53,9 @@ const Cards = (props) => {
                         <Typography color="textSecondary" gutterBottom>{(t('rec.1'))}</Typography>
                         <Typography variant="h5"><CountUp start={0} end={
                             isDaily ?
-                                (props.data.todayRecovered).toString()
+                                (props.data.todayRecovered)
                                 :
-                                (props.data.recovered).toString()
+                                (props.data.recovered)
                         } duration={2.5} separator="," /></Typography>
                         <Typography color="textSecondary">{new Date(props.data.updated).toDateString()}</Typography>
                     </CardContent>
@@ -65,9 +65,9 @@ const Cards = (props) => {
                         <Typography color="textSecondary" gutterBottom>{t('dea.1')}</Typography>
                         <Typography variant="h5"><CountUp start={0} end={
                             isDaily ?
-                                (props.data.todayDeaths).toString()
+                                (props.data.todayDeaths)
                                 :
-                                (props.data.deaths).toString()
+                                (props.data.deaths)
                         } duration={2.5} separator="," /></Typography>
                         <Typography color="textSecondary">{new Date(props.data.updated).toDateString()}</Typography>
                     </CardContent>
@@ -80,7 +80,7 @@ const Cards = (props) => {
                                     <CardContent className={styles.cardphone} style={{ paddingLeft: '0%', paddingRight: '1', paddingTop: '2px', paddingBottom: '9px' }}>
                                         <Typography color="textSecondary" gutterBottom>{t('Active.1')}</Typography>
                                         <Typography variant="h5"><CountUp start={0} end={
-                                            (props.data.active).toString()
+                                            (props.data.active)
                                         } duration={2.5} separator="," /></Typography>
                                         <Typography color="textSecondary">{new Date(props.data.updated).toDateString()}</Typography>
 
@@ -90,7 +90,7 @@ const Cards = (props) => {
                                     <CardContent className={styles.cardphone} style={{ paddingLeft: '0%', paddingRight: '1', paddingTop: '2px', paddingBottom: '9px' }}>
                                         <Typography color="textSecondary" gutterBottom>{t('Tests.1')}</Typography>
                                         <Typography variant="h5"><CountUp start={0} end={
-                                            (props.data.tests).toString()
+                                            (props.data.tests)
                                         } duration={2.5} separator="," /></Typography>
                                         <Typography color="textSecondary">{new Date(props.data.updated).toDateString()}</Typography>
 
@@ -100,7 +100,7 @@ const Cards = (props) => {
                                     <CardContent className={styles.cardphone} style={{ paddingLeft: '0%', paddingRight: '1', paddingTop: '2px', paddingBottom: '9px' }}>
                                         <Typography color="textSecondary" gutterBottom>{t('CriticalCases.1')}</Typography>
                                         <Typography variant="h5"><CountUp start={0} end={
-                                            (props.data.critical).toString()
+                                            (props.data.critical)
                                         } duration={2.5} separator="," /></Typography>
                                         <Typography color="textSecondary">{new Date(props.data.updated).toDateString()}</Typography>
 

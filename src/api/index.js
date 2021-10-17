@@ -118,11 +118,15 @@ export const fetchHistoricalData = async (country) => {
                 let lastIndex = index - 1;
                 let lastIndexValue = casesArray[lastIndex];
                 let newIndexValue = value - lastIndexValue;
-
                 splitted = dateArray[index].split("/");
                 dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
-                newCasesArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                if(newIndexValue < 0){
+                    newIndexValue = 0;
+                    newCasesArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                }else{
+                    newCasesArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                }
             }
             return;
         })
@@ -141,7 +145,12 @@ export const fetchHistoricalData = async (country) => {
                 splitted = dateArray[index].split("/");
                 dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
-                newDeathsArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                if(newIndexValue < 0){
+                    newIndexValue = 0;
+                    newDeathsArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                }else{
+                    newDeathsArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                }
             }
             return;
         })
@@ -183,7 +192,12 @@ export const fetchHistoricalData = async (country) => {
                 splitted = dateArray[index].split("/");
                 dateStr = "20" + splitted[2] + "-" + splitted[0] + "-" + splitted[1];
                 const dateFinal = new Date(dateStr);
-                newRecoveredArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                if(newIndexValue < 0){
+                    newIndexValue = 0;
+                    newRecoveredArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                }else{
+                    newRecoveredArray.push({ 'x': dateFinal, 'y': newIndexValue });
+                }
             }
             return;
         })
