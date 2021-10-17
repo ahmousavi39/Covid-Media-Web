@@ -146,7 +146,7 @@ const WhatIsCovid19 = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState({ whatis: false })
   return (
-    <div className="card">
+    <div className="card" style={{fontWeight: 100}}>
       <div className="card-body">
         <h2 className="card-title">{t('What is covid19.1')}</h2>
         <a onClick={() => { setOpen({ whatis: !open.whatis }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.whatis ? t('Show more.1') : t('Show less.1')}</a>
@@ -185,7 +185,7 @@ const Protect = () => {
   const [open, setOpen] = useState({ protect: false });
   const [open1, setOpen1] = useState({ protect: false, spread: false, mask: false, gloves: false, cleaning: false, distancing: false, handwashing: false });
   return (
-    <div className="card">
+    <div className="card" style={{fontWeight: 100}}>
       <div className="card-body">
         <h2 className="card-title">{t('Prevent getting sick.1')}</h2>
         <a onClick={() => { setOpen({ protect: !open.protect }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.protect ? t('Show more.1') : t('Show less.1')}</a>
@@ -1119,7 +1119,7 @@ const Sick = () => {
   const [open, setOpen] = useState({ sick: false });
   const [open1, setOpen1] = useState({ whattodo: false, isolate: false, quarantine: false, caring: false, parents: false, canbearound: false });
   return (
-    <div className="card">
+    <div className="card" style={{fontWeight: 100}}>
       <div className="card-body">
         <h2 className="card-title">{t('If you are sick.1')}</h2>
         <a onClick={() => { setOpen({ sick: !open.sick }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.sick ? t('Show more.1') : t('Show less.1')}</a>
@@ -1709,7 +1709,7 @@ const Symptoms = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState({ symptoms: false });
   return (
-    <div className="card">
+    <div className="card" style={{fontWeight: 100}}>
       <div className="card-body">
         <h2 className="card-title">{t('Symptomses.1')}</h2>
         <a onClick={() => { setOpen({ symptoms: !open.symptoms }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.symptoms ? t('Show more.1') : t('Show less.1')}</a>
@@ -1799,7 +1799,7 @@ const Testing = () => {
   const [open1, setOpen1] = useState({ testing: false, currentinfection: false, pastinfection: false });
 
   return (
-    <div className="card">
+    <div className="card" style={{fontWeight: 100}}>
       <div className="card-body">
         <h2 className="card-title">{t('Testing.1')}</h2>
         <a onClick={() => { setOpen({ testing: !open.testing }) }} style={{ borderRadius: 5, padding: 10 }} className="btn btn-primary">{!open.testing ? t('Show more.1') : t('Show less.1')}</a>
@@ -1984,7 +1984,7 @@ export const AllWiki = (props) => {
         window.location.pathname = first_path + '/wiki/quick'
       }}>{t('Translate.2')}<span className={styles.a}><a>{t('Translate.3')}</a></span></h1>
 
-      <div className={styles.div} style={{ fontFamily: "Arial Black" }}>
+      <div className={styles.div} >
         <ul style={{ paddingLeft: '0', marginLeft: '0' }}>
 
           <div id='what-is' className={styles.card_padding} style={{ paddingTop: '0', marginTop: '0' }}>
