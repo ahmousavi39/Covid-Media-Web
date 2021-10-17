@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = "https://corona.lmao.ninja/v3/covid-19";
+const url = "https://disease.sh/v3/covid-19";
 const urlHisory = 'https://disease.sh/v3/covid-19/historical'
 const urlVacine = 'https://disease.sh/v3/covid-19/vaccine/coverage';
 
@@ -314,7 +314,6 @@ export const raceChart = async () => {
     }
 
 };
-console.log(raceChart());
 
 
 export const fetchCountries = async () => {

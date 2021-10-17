@@ -35,7 +35,7 @@ function App() {
         }))
       );
 
-  const { data } = useSWR("https://corona.lmao.ninja/v2/jhucsse", fetcher);
+  const { data } = useSWR("https://disease.sh/v2/jhucsse", fetcher);
 
   // Initialize our map
   useEffect(() => {
@@ -227,7 +227,7 @@ export function OnlyMap() {
         }))
       );
 
-  const { data } = useSWR("https://corona.lmao.ninja/v2/jhucsse", fetcher);
+  const { data } = useSWR("https://disease.sh/v2/jhucsse", fetcher);
 
   // Initialize our map
   useEffect(() => {

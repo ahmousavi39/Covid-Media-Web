@@ -3,7 +3,6 @@ import styles from './Navigation.module.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import Donate from '../Donate/Donate';
 
 export default function Navigation() {
 
@@ -86,11 +85,6 @@ export default function Navigation() {
               </NavLink>
             </div>
 
-            <div style={{ position: "right" }} className={styles.lann}>
-              <Donate handleShow={isOpen} />
-            </div>
-
-            <button onClick={() => {setIsOpen(true)}}>Open</button>
 
             <div style={{ position: "right" }} className={styles.lan}>
               <select value={first_path} onChange={onLangChange} className="d-inline p-2 bg-dark text-white" >
